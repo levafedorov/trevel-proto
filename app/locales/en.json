@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "about": "About",
+    "explore": "Explore"
+  },
+
+  "hero": {
+    "eyebrow": "Premium Travel Experiences",
+    "titleLine1": "The World is",
+    "titleLine2": "Waiting for You",
+    "subtitle": "Handpicked destinations, expert local guides, and memories that last a lifetime. Let WanderLux take you there.",
+    "cta": "Explore Destinations",
+    "ctaSecondary": "Our Story",
+    "scroll": "Scroll"
+  },
+
+  "advantages": {
+    "eyebrow": "Why Choose Us",
+    "title": "Travel, Elevated",
+    "subtitle": "We handle every detail so you can focus on experiencing the world.",
+    "items": {
+      "curated": {
+        "title": "Curated Destinations",
+        "description": "Every destination in our portfolio is personally vetted for authenticity, beauty, and traveler satisfaction."
+      },
+      "guides": {
+        "title": "Expert Local Guides",
+        "description": "Our network of passionate local experts share stories and secrets no guidebook can capture."
+      },
+      "price": {
+        "title": "Best Price Guarantee",
+        "description": "We negotiate directly with partners to ensure you always get the best value for your investment."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Our dedicated team is always available — before, during, and after your journey — for complete peace of mind."
+      }
+    }
+  },
+
+  "offers": {
+    "eyebrow": "Fresh Offerings",
+    "title": "Recent Destinations",
+    "viewAll": "View All Offers",
+    "active": "Available",
+    "inactive": "Unavailable"
+  },
+
+  "cta": {
+    "title": "Ready for Your Next Adventure?",
+    "subtitle": "Thousands of travelers have trusted WanderLux to craft their perfect journey.",
+    "button": "Browse All Destinations"
+  },
+
+  "dashboard": {
+    "eyebrow": "Our Portfolio",
+    "title": "All Destinations",
+    "subtitle": "Explore our full collection of curated travel experiences worldwide.",
+    "filterAll": "All",
+    "filterActive": "Available",
+    "filterInactive": "Unavailable",
+    "catAll": "All Categories",
+    "noResults": "No destinations found",
+    "noResultsHint": "Try adjusting your filters to find what you're looking for.",
+    "resetFilters": "Reset Filters"
+  },
+
+  "about": {
+    "eyebrow": "Our Agency",
+    "heroTitle": "Passion for the World",
+    "heroSubtitle": "We are a team of dedicated travelers who turned their love of exploration into a premium travel agency.",
+    "storyEyebrow": "Our Origin",
+    "storyTitle": "Born from a Journey, Built for Yours",
+    "storyParagraph1": "WanderLux was founded in 2013 by Sophie Laurent, a former journalist who spent a decade traveling to more than 60 countries. Frustrated by cookie-cutter tour packages that missed the soul of each destination, she set out to build something different.",
+    "storyParagraph2": "Today, WanderLux curates deeply personal travel experiences. We work with a handpicked network of local guides, boutique hotels, and hidden restaurants to craft journeys that are authentic, surprising, and transformative.",
+    "storyParagraph3": "We believe travel changes people. When done well, it builds empathy, broadens horizons, and creates memories that outlast any material possession. That belief is at the heart of everything we do.",
+    "statsYears": "Years of experience",
+    "statsRating": "Average rating",
+    "statsClients": "Happy travelers",
+    "contactEyebrow": "Get in Touch",
+    "contactTitle": "We'd Love to Hear from You",
+    "contactAddress": "Address",
+    "contactPhone": "Phone",
+    "contactEmail": "Email"
+  },
+
+  "offerPage": {
+    "notFound": "This destination could not be found.",
+    "backToDashboard": "Back to Destinations",
+    "aboutTrip": "About This Journey",
+    "highlights": "What's Included",
+    "iAmIn": "I'm In – Book Now",
+    "unavailable": "Currently Unavailable",
+    "unavailableHint": "This offer is not currently accepting bookings.",
+    "noCommitment": "No payment required — we'll be in touch.",
+    "includes": {
+      "flights": "Return flights included",
+      "hotel": "Boutique hotel accommodation",
+      "guide": "Expert local guide",
+      "insurance": "Travel insurance"
+    }
+  },
+
+  "booking": {
+    "title": "Book Your Journey",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Jane Smith",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "jane@example.com",
+    "submit": "Send My Request",
+    "submitting": "Sending...",
+    "disclaimer": "No payment required. Our team will contact you within 24 hours.",
+    "successTitle": "You're In!",
+    "successMessage": "Thank you! A confirmation has been sent to {email}. Our travel specialist will reach out within 24 hours.",
+    "successClose": "Close",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "We couldn't process your request. Please try again.",
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "emailInvalid": "Please enter a valid email address"
+    }
+  },
+
+  "footer": {
+    "tagline": "Curating extraordinary travel experiences for those who believe the journey is as important as the destination.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "crafted": "Crafted with ♥ for adventurous souls"
+  }
+}

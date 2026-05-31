@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "about": "About",
+    "explore": "Explore"
+  },
+
+  "hero": {
+    "eyebrow": "Turkey Travel Specialists",
+    "titleLine1": "Discover the",
+    "titleLine2": "Heart of Turkey",
+    "subtitle": "From Istanbul's Byzantine mosaics to Cappadocia's fairy chimneys and the turquoise shores of the Aegean — OlimpiaTour crafts your perfect Turkish journey.",
+    "cta": "Explore Tours",
+    "ctaSecondary": "Our Story",
+    "scroll": "Scroll"
+  },
+
+  "advantages": {
+    "eyebrow": "Why Travel Turkey with Us",
+    "title": "Turkey, Like Never Before",
+    "subtitle": "Our Turkey specialists handle every detail so you can focus on being present.",
+    "items": {
+      "curated": {
+        "title": "Handpicked Itineraries",
+        "description": "Every Turkish route is designed in-country by our specialists to blend iconic landmarks with authentic local experiences few tourists ever find."
+      },
+      "guides": {
+        "title": "Native Turkish Guides",
+        "description": "Our guides were born in the regions they lead. They bring history, culture, and cuisine to life in ways no guidebook can capture."
+      },
+      "price": {
+        "title": "Best Price Guarantee",
+        "description": "We negotiate directly with our Turkish partners to ensure you always get the best value for your investment."
+      },
+      "support": {
+        "title": "24/7 In-Country Support",
+        "description": "Our team is based in Turkey and available around the clock — before, during, and after your journey."
+      }
+    }
+  },
+
+  "offers": {
+    "eyebrow": "Curated Journeys",
+    "title": "Featured Tours",
+    "viewAll": "View All Tours",
+    "active": "Available",
+    "inactive": "Coming Soon"
+  },
+
+  "cta": {
+    "title": "Turkey is Waiting for You",
+    "subtitle": "Thousands of travellers have trusted OlimpiaTour to design their perfect Turkish journey.",
+    "button": "Browse All Tours"
+  },
+
+  "dashboard": {
+    "eyebrow": "Our Turkey Portfolio",
+    "title": "All Tours",
+    "subtitle": "Explore our full collection of handcrafted Turkish travel experiences.",
+    "filterAll": "All",
+    "filterActive": "Available",
+    "filterInactive": "Coming Soon",
+    "catAll": "All Categories",
+    "noResults": "No tours found",
+    "noResultsHint": "Try adjusting your filters to find what you're looking for.",
+    "resetFilters": "Reset Filters"
+  },
+
+  "about": {
+    "eyebrow": "Our Agency",
+    "heroTitle": "Driven by a Love for Turkey",
+    "heroSubtitle": "We are a team of Turkey specialists who turned years of in-country experience into a travel agency with one purpose: showing the world what Turkey truly is.",
+    "storyEyebrow": "How It Started",
+    "storyTitle": "One Trip. A Thousand Returns.",
+    "storyParagraph1": "OlimpiaTour was founded by Sophie Laurent, a French journalist who first arrived in Istanbul on a magazine assignment and never quite recovered. After five years reporting from Istanbul, Cappadocia, and the Aegean coast — filing stories on Byzantine architecture, Turkish cuisine, and the communities that keep ancient crafts alive — she realised that the Turkey most travellers see bears almost no resemblance to the one she had come to love.",
+    "storyParagraph2": "She founded OlimpiaTour to close that gap. We specialise exclusively in Turkey. Our guides are Turkish, our hotel partners are small and family-run, and our itineraries are built around the places and experiences that genuinely move people — not the ones that photograph well from a tour bus window.",
+    "storyParagraph3": "Turkey is not one destination. It is many: an ancient city layered twelve centuries deep, a volcanic landscape from another planet, a coastline where Roman ruins fall into turquoise sea. We are here to help you find the Turkey that speaks to you, and to take care of every detail so that you can simply be there.",
+    "statsYears": "Years of Turkey expertise",
+    "statsRating": "Average rating",
+    "statsClients": "Happy travellers",
+    "contactEyebrow": "Get in Touch",
+    "contactTitle": "We'd Love to Hear from You",
+    "contactAddress": "Address",
+    "contactPhone": "Phone",
+    "contactEmail": "Email"
+  },
+
+  "offerPage": {
+    "notFound": "This tour could not be found.",
+    "backToDashboard": "Back to All Tours",
+    "aboutTrip": "About This Journey",
+    "highlights": "Highlights",
+    "iAmIn": "I'm In – Book Now",
+    "unavailable": "Coming Soon",
+    "unavailableHint": "This tour is not yet open for bookings — check back soon.",
+    "noCommitment": "No payment required — we'll be in touch within 24 hours.",
+    "includes": {
+      "flights": "Return flights included",
+      "hotel": "Boutique hotel or cave accommodation",
+      "guide": "Native Turkish expert guide",
+      "insurance": "Travel insurance"
+    }
+  },
+
+  "booking": {
+    "title": "Book Your Turkey Journey",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Jane Smith",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Email address",
+    "submit": "Send My Request",
+    "submitting": "Sending...",
+    "disclaimer": "No payment required. Our team will contact you within 24 hours.",
+    "successTitle": "You're In!",
+    "successMessage": "Thank you! A confirmation has been sent to {email}. Our Turkey specialist will reach out within 24 hours.",
+    "successClose": "Close",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "We couldn't process your request. Please try again.",
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "emailInvalid": "Please enter a valid email address"
+    }
+  },
+
+  "footer": {
+    "tagline": "Turkey travel specialists. We craft journeys that go beyond the surface — into the history, flavour, and soul of this extraordinary country.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "crafted": "Crafted with ♥ for adventurous souls"
+  }
+}
