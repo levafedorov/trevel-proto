@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-## Project: WanderLux Touristic Platform
+## Project: OlimpiaTour Touristic Platform
 
 A premium travel agency web platform built with Nuxt 4.
 
