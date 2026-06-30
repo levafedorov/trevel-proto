@@ -186,7 +186,7 @@ const descriptionParagraphs = computed(() =>
 const bookingOpen = ref(false)
 
 useSeoMeta({
-  title: computed(() => offer.value ? `${offer.value.name} – WanderLux` : 'Offer – WanderLux'),
+  title: computed(() => offer.value ? `${offer.value.name} – OlimpiaTour` : 'Offer – OlimpiaTour'),
   description: computed(() => offer.value?.shortDescription ?? ''),
   ogImage: computed(() => offer.value?.image ?? ''),
 })
