@@ -54,11 +54,11 @@
           <ul class="flex flex-col gap-3">
             <li class="flex items-start gap-2 text-sm text-stone-400">
               <UIcon name="i-lucide-map-pin" class="w-4 h-4 mt-0.5 text-amber-500 shrink-0" />
-              Istiklal Caddesi 45,<br>Beyoğlu, Istanbul 34430, Turkey
+              Izmir, Turkey
             </li>
             <li class="flex items-center gap-2 text-sm text-stone-400">
               <UIcon name="i-lucide-phone" class="w-4 h-4 text-amber-500 shrink-0" />
-              +90 212 123 45 67
+              +90 000 000 00 00
             </li>
             <li class="flex items-center gap-2 text-sm text-stone-400">
               <UIcon name="i-lucide-mail" class="w-4 h-4 text-amber-500 shrink-0" />
@@ -83,15 +83,19 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
+// TODO: replace '#' with real profile / messenger links once provided.
 const socials = [
+  { name: 'WhatsApp', href: '#', icon: 'i-simple-icons-whatsapp' },
+  { name: 'Telegram', href: '#', icon: 'i-simple-icons-telegram' },
   { name: 'Instagram', href: '#', icon: 'i-lucide-instagram' },
   { name: 'Facebook', href: '#', icon: 'i-lucide-facebook' },
-  { name: 'Twitter', href: '#', icon: 'i-lucide-twitter' },
 ]
 
 const quickLinks = computed(() => [
   { to: '/', label: t('nav.home') },
   { to: '/dashboard', label: t('nav.destinations') },
+  { to: '/reviews', label: t('nav.reviews') },
   { to: '/about', label: t('nav.about') },
+  { to: '/contacts', label: t('nav.contacts') },
 ])
 </script>

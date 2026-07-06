@@ -42,7 +42,7 @@
           <UButton
             size="xl"
             variant="outline"
-            class="border-white/50 text-white hover:bg-white/10 hover:border-white"
+            class="!ring-white/60 !text-white hover:!bg-white/10 hover:!ring-white"
           >
             {{ $t('hero.ctaSecondary') }}
           </UButton>

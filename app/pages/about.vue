@@ -11,10 +11,10 @@
         <p class="text-amber-400 font-medium tracking-widest text-sm uppercase mb-4">
           {{ $t('about.eyebrow') }}
         </p>
-        <h1 class="font-serif text-5xl lg:text-6xl font-bold text-white mb-4 max-w-lg">
+        <h1 class="font-serif text-5xl lg:text-6xl font-bold text-white mb-4 max-w-xl">
           {{ $t('about.heroTitle') }}
         </h1>
-        <p class="text-stone-300 text-lg max-w-md">
+        <p class="text-stone-300 text-lg max-w-xl">
           {{ $t('about.heroSubtitle') }}
         </p>
       </UContainer>
@@ -37,13 +37,10 @@
               <p>{{ $t('about.storyParagraph3') }}</p>
             </div>
 
-            <!-- Stats -->
-            <div class="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-stone-100">
-              <div v-for="stat in stats" :key="stat.label" class="text-center">
-                <div class="font-serif text-3xl font-bold text-amber-600 mb-1">{{ stat.value }}</div>
-                <div class="text-stone-500 text-xs">{{ stat.label }}</div>
-              </div>
-            </div>
+            <!-- Signature quote -->
+            <blockquote class="mt-10 pt-8 border-t border-stone-100 font-serif text-2xl text-stone-900 italic leading-snug">
+              «{{ $t('about.quote') }}»
+            </blockquote>
           </div>
 
           <!-- Manager photo -->
@@ -51,14 +48,14 @@
             <div class="relative">
               <div class="w-80 h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://picsum.photos/seed/manager-portrait/640/800"
-                  alt="Sophie Laurent"
+                  :src="managerPhoto"
+                  :alt="$t('about.managerName')"
                   class="w-full h-full object-cover"
                 />
               </div>
               <div class="absolute -bottom-6 -left-6 bg-amber-600 text-white rounded-2xl p-5 shadow-xl">
-                <div class="font-serif text-lg font-bold">Sophie Laurent</div>
-                <div class="text-amber-200 text-sm">CEO & Head of Experiences</div>
+                <div class="font-serif text-lg font-bold">{{ $t('about.managerName') }}</div>
+                <div class="text-amber-200 text-sm">{{ $t('about.managerRole') }}</div>
               </div>
             </div>
           </div>
@@ -66,29 +63,45 @@
       </UContainer>
     </section>
 
-    <!-- Contacts section -->
-    <section class="py-24 bg-stone-50">
+    <!-- Philosophy section -->
+    <section class="py-24 bg-stone-900 text-white overflow-hidden relative">
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-15"
+        style="background-image: url('https://picsum.photos/seed/turkey-philosophy/1920/700');"
+      />
+      <UContainer class="relative z-10 text-center max-w-3xl">
+        <p class="text-amber-400 font-medium tracking-widest text-sm uppercase mb-4">
+          {{ $t('about.philosophyEyebrow') }}
+        </p>
+        <h2 class="font-serif text-4xl lg:text-5xl font-bold mb-6">
+          {{ $t('about.philosophyTitle') }}
+        </h2>
+        <p class="text-stone-300 text-lg lg:text-xl leading-relaxed">
+          {{ $t('about.philosophyText') }}
+        </p>
+      </UContainer>
+    </section>
+
+    <!-- Values section -->
+    <section class="py-24 bg-white">
       <UContainer>
         <div class="text-center mb-14">
           <p class="text-amber-600 font-medium tracking-widest text-sm uppercase mb-3">
-            {{ $t('about.contactEyebrow') }}
+            {{ $t('about.valuesEyebrow') }}
           </p>
           <h2 class="font-serif text-4xl font-bold text-stone-900">
-            {{ $t('about.contactTitle') }}
+            {{ $t('about.valuesTitle') }}
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
           <div
-            v-for="contact in contacts"
-            :key="contact.label"
-            class="bg-white rounded-2xl p-8 text-center border border-stone-100 hover:border-amber-200 hover:shadow-lg transition-all duration-300"
+            v-for="value in values"
+            :key="value.key"
+            class="flex flex-col items-center text-center p-6 rounded-2xl bg-stone-50 border border-stone-100 hover:border-amber-200 hover:shadow-lg transition-all duration-300"
           >
-            <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-4">
-              <UIcon :name="contact.icon" class="w-6 h-6 text-amber-600" />
-            </div>
-            <div class="text-stone-500 text-sm mb-2">{{ contact.label }}</div>
-            <div class="text-stone-900 font-semibold text-sm">{{ contact.value }}</div>
+            <div class="text-4xl mb-4">{{ value.emoji }}</div>
+            <div class="text-stone-700 text-sm font-semibold leading-snug">{{ value.label }}</div>
           </div>
         </div>
       </UContainer>
@@ -97,34 +110,21 @@
 </template>
 
 <script setup lang="ts">
+import managerPhoto from '~/assets/images/director-photo.jpeg'
+
 const { t } = useI18n()
 
 useSeoMeta({
   title: 'About Us – OlimpiaTour',
-  description: 'Learn about OlimpiaTour — Turkey travel specialists dedicated to showing the world what Turkey truly is.',
+  description: 'Learn about OlimpiaTour — signature tours across Turkey, from someone who truly lives this country.',
 })
 
-const stats = computed(() => [
-  { value: '10+', label: t('about.statsYears') },
-  { value: '4.8★', label: t('about.statsRating') },
-  { value: '1200+', label: t('about.statsClients') },
-])
-
-const contacts = computed(() => [
-  {
-    icon: 'i-lucide-map-pin',
-    label: t('about.contactAddress'),
-    value: 'Istiklal Caddesi 45, Beyoğlu, Istanbul',
-  },
-  {
-    icon: 'i-lucide-phone',
-    label: t('about.contactPhone'),
-    value: '+90 212 123 45 67',
-  },
-  {
-    icon: 'i-lucide-mail',
-    label: t('about.contactEmail'),
-    value: 'hello@olimpiatour.travel',
-  },
+// Emoji are language-neutral and live here; only the label text is translated.
+const values = computed(() => [
+  { key: 'soul', emoji: '🌿', label: t('about.values.soul') },
+  { key: 'authentic', emoji: '🫒', label: t('about.values.authentic') },
+  { key: 'comfort', emoji: '☀️', label: t('about.values.comfort') },
+  { key: 'care', emoji: '💙', label: t('about.values.care') },
+  { key: 'hidden', emoji: '🌊', label: t('about.values.hidden') },
 ])
 </script>

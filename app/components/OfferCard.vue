@@ -14,7 +14,7 @@
         <!-- Badge -->
         <UBadge
           v-if="showStatus"
-          :color="offer.active ? 'success' : 'neutral'"
+          :color="offer.active ? 'primary' : 'neutral'"
           variant="solid"
           class="absolute top-3 right-3"
         >

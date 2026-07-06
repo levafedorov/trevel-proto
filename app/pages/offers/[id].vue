@@ -26,7 +26,7 @@
             <div class="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <div class="flex items-center gap-2 mb-3">
-                  <UBadge :color="offer.active ? 'success' : 'neutral'" variant="solid">
+                  <UBadge :color="offer.active ? 'primary' : 'neutral'" variant="solid">
                     {{ offer.active ? $t('offers.active') : $t('offers.inactive') }}
                   </UBadge>
                   <span class="bg-black/30 backdrop-blur-sm text-white text-xs px-2.5 py-1 rounded-full capitalize">

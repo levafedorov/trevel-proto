@@ -35,20 +35,6 @@
             </UBadge>
           </UButton>
         </div>
-
-        <!-- Category filter -->
-        <div class="flex items-center gap-2 flex-wrap">
-          <UButton
-            v-for="cat in categories"
-            :key="cat.value"
-            size="xs"
-            :variant="activeCategory === cat.value ? 'solid' : 'outline'"
-            :color="activeCategory === cat.value ? 'primary' : 'neutral'"
-            @click="activeCategory = cat.value"
-          >
-            {{ cat.label }}
-          </UButton>
-        </div>
       </div>
 
       <!-- Offers Grid -->
@@ -58,7 +44,7 @@
         enter-to-class="opacity-100"
         mode="out-in"
       >
-        <div v-if="filteredOffers.length" :key="activeFilter + activeCategory" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div v-if="filteredOffers.length" :key="activeFilter" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <OfferCard
             v-for="offer in filteredOffers"
             :key="offer.id"
@@ -90,7 +76,6 @@ useSeoMeta({
 })
 
 const activeFilter = ref<'all' | 'active' | 'inactive'>('all')
-const activeCategory = ref<string>('all')
 
 const filters = computed(() => [
   { value: 'all', label: t('dashboard.filterAll'), count: offers.length },
@@ -98,26 +83,16 @@ const filters = computed(() => [
   { value: 'inactive', label: t('dashboard.filterInactive'), count: offers.filter(o => !o.active).length },
 ])
 
-const categories = computed(() => {
-  const cats = [...new Set(offers.map(o => o.category))]
-  return [
-    { value: 'all', label: t('dashboard.catAll') },
-    ...cats.map(c => ({ value: c, label: c.charAt(0).toUpperCase() + c.slice(1) })),
-  ]
-})
-
 const filteredOffers = computed(() => {
   let result = [...offers]
 
   if (activeFilter.value === 'active') result = result.filter(o => o.active)
   if (activeFilter.value === 'inactive') result = result.filter(o => !o.active)
-  if (activeCategory.value !== 'all') result = result.filter(o => o.category === activeCategory.value)
 
   return result
 })
 
 function resetFilters() {
   activeFilter.value = 'all'
-  activeCategory.value = 'all'
 }
 </script>

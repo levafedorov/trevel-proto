@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+      ]
+    }
+  },
 
   modules: [
     '@nuxt/ui',
@@ -13,13 +22,6 @@ export default defineNuxtConfig({
   ],
 
   css: ['~/assets/css/main.css'],
-
-  ui: {
-    colors: {
-      primary: 'amber',
-      neutral: 'stone',
-    },
-  },
 
   i18n: {
     locales: [
@@ -36,7 +38,7 @@ export default defineNuxtConfig({
         file: 'ru.json',
       },
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'ru',
     strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,
