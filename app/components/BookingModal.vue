@@ -58,8 +58,8 @@
 
       <!-- Success state -->
       <div v-else class="flex flex-col items-center text-center py-6 gap-4">
-        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-          <UIcon name="i-lucide-check-circle" class="w-8 h-8 text-green-600" />
+        <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center">
+          <UIcon name="i-lucide-check-circle" class="w-8 h-8 text-amber-600" />
         </div>
         <h3 class="font-serif text-2xl font-bold text-stone-900">
           {{ $t('booking.successTitle') }}
