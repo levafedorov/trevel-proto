@@ -48,7 +48,7 @@
             <div class="relative">
               <div class="w-80 h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="~assets/images/manager.jpg"
+                  :src="managerPhoto"
                   :alt="$t('about.managerName')"
                   class="w-full h-full object-cover"
                 />
@@ -110,6 +110,8 @@
 </template>
 
 <script setup lang="ts">
+import managerPhoto from '~/assets/images/director-photo.jpeg'
+
 const { t } = useI18n()
 
 useSeoMeta({
