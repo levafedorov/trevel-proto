@@ -13,7 +13,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
           v-for="(item, i) in advantages"
           :key="i"
@@ -35,24 +35,19 @@ const { t } = useI18n()
 
 const advantages = computed(() => [
   {
-    icon: 'i-lucide-gem',
+    icon: 'i-lucide-compass',
     title: t('advantages.items.curated.title'),
     description: t('advantages.items.curated.description'),
   },
   {
-    icon: 'i-lucide-users',
+    icon: 'i-lucide-route',
     title: t('advantages.items.guides.title'),
     description: t('advantages.items.guides.description'),
   },
   {
-    icon: 'i-lucide-badge-percent',
+    icon: 'i-lucide-user-round',
     title: t('advantages.items.price.title'),
     description: t('advantages.items.price.description'),
-  },
-  {
-    icon: 'i-lucide-headphones',
-    title: t('advantages.items.support.title'),
-    description: t('advantages.items.support.description'),
   },
 ])
 </script>

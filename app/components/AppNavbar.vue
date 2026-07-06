@@ -146,7 +146,9 @@ const localeOptions = [
 const navLinks = computed(() => [
   { to: '/', label: t('nav.home'), icon: 'i-lucide-home' },
   { to: '/dashboard', label: t('nav.destinations'), icon: 'i-lucide-map' },
+  { to: '/#reviews', label: t('nav.reviews'), icon: 'i-lucide-star' },
   { to: '/about', label: t('nav.about'), icon: 'i-lucide-info' },
+  { to: '/about#contacts', label: t('nav.contacts'), icon: 'i-lucide-phone' },
 ])
 
 onMounted(() => {

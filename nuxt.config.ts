@@ -36,7 +36,7 @@ export default defineNuxtConfig({
         file: 'ru.json',
       },
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'ru',
     strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,
