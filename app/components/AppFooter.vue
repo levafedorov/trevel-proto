@@ -94,6 +94,8 @@ const socials = [
 const quickLinks = computed(() => [
   { to: '/', label: t('nav.home') },
   { to: '/dashboard', label: t('nav.destinations') },
+  { to: '/reviews', label: t('nav.reviews') },
   { to: '/about', label: t('nav.about') },
+  { to: '/contacts', label: t('nav.contacts') },
 ])
 </script>

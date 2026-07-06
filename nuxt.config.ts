@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+      ]
+    }
+  },
 
   modules: [
     '@nuxt/ui',

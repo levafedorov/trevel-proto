@@ -106,34 +106,6 @@
         </div>
       </UContainer>
     </section>
-
-    <!-- Contacts section -->
-    <section id="contacts" class="py-24 bg-stone-50 scroll-mt-24">
-      <UContainer>
-        <div class="text-center mb-14">
-          <p class="text-amber-600 font-medium tracking-widest text-sm uppercase mb-3">
-            {{ $t('about.contactEyebrow') }}
-          </p>
-          <h2 class="font-serif text-4xl font-bold text-stone-900">
-            {{ $t('about.contactTitle') }}
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div
-            v-for="contact in contacts"
-            :key="contact.label"
-            class="bg-white rounded-2xl p-8 text-center border border-stone-100 hover:border-amber-200 hover:shadow-lg transition-all duration-300"
-          >
-            <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-4">
-              <UIcon :name="contact.icon" class="w-6 h-6 text-amber-600" />
-            </div>
-            <div class="text-stone-500 text-sm mb-2">{{ contact.label }}</div>
-            <div class="text-stone-900 font-semibold text-sm">{{ contact.value }}</div>
-          </div>
-        </div>
-      </UContainer>
-    </section>
   </div>
 </template>
 
@@ -152,24 +124,5 @@ const values = computed(() => [
   { key: 'comfort', emoji: '☀️', label: t('about.values.comfort') },
   { key: 'care', emoji: '💙', label: t('about.values.care') },
   { key: 'hidden', emoji: '🌊', label: t('about.values.hidden') },
-])
-
-// TODO: replace with real contact details once provided.
-const contacts = computed(() => [
-  {
-    icon: 'i-lucide-map-pin',
-    label: t('about.contactAddress'),
-    value: 'Izmir, Turkey',
-  },
-  {
-    icon: 'i-lucide-phone',
-    label: t('about.contactPhone'),
-    value: '+90 000 000 00 00',
-  },
-  {
-    icon: 'i-lucide-mail',
-    label: t('about.contactEmail'),
-    value: 'hello@olimpiatour.travel',
-  },
 ])
 </script>

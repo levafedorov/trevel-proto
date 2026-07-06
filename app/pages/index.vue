@@ -3,7 +3,6 @@
     <HeroSection />
     <AdvantagesSection />
     <RecentOffersSection />
-    <ReviewsSection />
 
     <!-- CTA Banner -->
     <section class="py-24 bg-amber-600 relative overflow-hidden">

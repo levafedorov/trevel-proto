@@ -87,12 +87,16 @@
       "hidden": "Places No Guidebook Mentions"
     },
     "managerName": "Lyubov Fedorova",
-    "managerRole": "Founder",
-    "contactEyebrow": "Get in Touch",
-    "contactTitle": "We'd Love to Hear from You",
-    "contactAddress": "Address",
-    "contactPhone": "Phone",
-    "contactEmail": "Email"
+    "managerRole": "Founder"
+  },
+
+  "contacts": {
+    "eyebrow": "Get in Touch",
+    "title": "We'd Love to Hear from You",
+    "subtitle": "We'll answer any question about tours, dates, and trip details — reach out however suits you.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
   },
 
   "reviews": {
