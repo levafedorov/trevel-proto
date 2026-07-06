@@ -23,13 +23,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  ui: {
-    colors: {
-      primary: 'amber',
-      neutral: 'stone',
-    },
-  },
-
   i18n: {
     locales: [
       {

@@ -48,7 +48,7 @@
             <div class="relative">
               <div class="w-80 h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://picsum.photos/seed/manager-portrait/640/800"
+                  src="~assets/images/manager.jpg"
                   :alt="$t('about.managerName')"
                   class="w-full h-full object-cover"
                 />
