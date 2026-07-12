@@ -141,7 +141,7 @@ const mobileMenuOpen = ref(false)
 const localeOptions = [
   { code: 'en', label: 'EN' },
   { code: 'ru', label: 'RU' },
-]
+] as const
 
 const navLinks = computed(() => [
   { to: '/', label: t('nav.home'), icon: 'i-lucide-home' },
