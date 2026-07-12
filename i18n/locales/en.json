@@ -123,20 +123,63 @@
   },
 
   "offerPage": {
-    "notFound": "This tour could not be found.",
-    "backToDashboard": "Back to All Tours",
-    "aboutTrip": "About This Journey",
-    "highlights": "Highlights",
-    "iAmIn": "I'm In – Book Now",
-    "unavailable": "Coming Soon",
-    "unavailableHint": "This tour is not yet open for bookings — check back soon.",
-    "noCommitment": "No payment required — we'll be in touch within 24 hours.",
-    "includes": {
-      "flights": "Return flights included",
-      "hotel": "Boutique hotel or cave accommodation",
-      "guide": "Russian-speaking guide",
-      "insurance": "Travel insurance"
-    }
+    "nav": {
+      "overview": "Overview",
+      "itinerary": "Itinerary",
+      "inclusions": "What's included",
+      "practical": "Good to know",
+      "departures": "Departures"
+    },
+    "cta": {
+      "book": "Book now",
+      "comingSoon": "Coming soon",
+      "waitlist": "Join waitlist",
+      "hint": "No payment required — we'll be in touch within 24 hours"
+    },
+    "stats": {
+      "days": "days",
+      "excursions": "excursions",
+      "reviews": "{count} reviews",
+      "guide": "guide"
+    },
+    "overview": {
+      "title": "About this journey"
+    },
+    "itinerary": {
+      "title": "Day by day",
+      "hint": "tap a day to expand"
+    },
+    "inclusions": {
+      "title": "What's included in the tour",
+      "included": "Included in the price",
+      "excluded": "Not included"
+    },
+    "practical": {
+      "title": "Good to know"
+    },
+    "meals": {
+      "breakfast": "breakfast",
+      "lunch": "lunch",
+      "dinner": "dinner"
+    },
+    "departures": {
+      "title": "Departures",
+      "nearest": "Next departure",
+      "book": "Book"
+    },
+    "states": {
+      "notFound": {
+        "title": "Tour not found",
+        "subtitle": "It may be archived, or the link is out of date.",
+        "back": "Back to tours"
+      },
+      "error": {
+        "title": "Something went wrong",
+        "subtitle": "We couldn't load the tour. Please try again.",
+        "retry": "Retry"
+      }
+    },
+    "perPerson": "per person"
   },
 
   "booking": {
