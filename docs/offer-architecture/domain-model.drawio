@@ -4,73 +4,73 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="Доменная модель тура — общая для версий A / B / C" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="title" value="Доменная модель тура — общая для версий A / B / C" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="40" y="10" width="700" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OfferSummary" value="&lt;b&gt;OfferSummary&lt;/b&gt; &lt;i&gt;&amp;lt;&amp;lt;витрина / список&amp;gt;&amp;gt;&lt;/i&gt;&lt;hr size=&quot;1&quot;&gt;+ id, slug : string&lt;br&gt;+ title, shortDescription : LocalizedText&lt;br&gt;+ heroImage : string&lt;br&gt;+ region, category&lt;br&gt;+ durationDays : int&lt;br&gt;+ priceFrom : Money&lt;br&gt;+ availability : Availability&lt;br&gt;+ rating, reviewCount" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="OfferSummary" value="&lt;b&gt;OfferSummary&lt;/b&gt; &lt;i&gt;&amp;lt;&amp;lt;витрина / список&amp;gt;&amp;gt;&lt;/i&gt;&lt;hr size=&quot;1&quot;&gt;+ id, slug : string&lt;br&gt;+ title, shortDescription : LocalizedText&lt;br&gt;+ heroImage : string&lt;br&gt;+ region, category&lt;br&gt;+ durationDays : int&lt;br&gt;+ priceFrom : Money&lt;br&gt;+ availability : Availability&lt;br&gt;+ rating, reviewCount" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="60" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="Offer" value="&lt;b&gt;Offer&lt;/b&gt; &lt;i&gt;&amp;lt;&amp;lt;детальная страница&amp;gt;&amp;gt;&lt;/i&gt;&lt;hr size=&quot;1&quot;&gt;+ id, slug, title, subtitle&lt;br&gt;+ availability : Availability&lt;br&gt;+ gallery : Media[]&lt;br&gt;+ region, durationDays&lt;br&gt;+ departures : Departure[]&lt;br&gt;+ priceFrom : Money&lt;br&gt;+ priceNote : LocalizedText&lt;br&gt;+ paymentOptions : PaymentOption[]&lt;br&gt;+ inclusions : InclusionItem[]&lt;br&gt;+ itinerary : ItineraryDay[]&lt;br&gt;+ practicalInfo : string[]&lt;br&gt;+ meta : SeoMeta" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="Offer" value="&lt;b&gt;Offer&lt;/b&gt; &lt;i&gt;&amp;lt;&amp;lt;детальная страница&amp;gt;&amp;gt;&lt;/i&gt;&lt;hr size=&quot;1&quot;&gt;+ id, slug, title, subtitle&lt;br&gt;+ availability : Availability&lt;br&gt;+ gallery : Media[]&lt;br&gt;+ region, durationDays&lt;br&gt;+ departures : Departure[]&lt;br&gt;+ priceFrom : Money&lt;br&gt;+ priceNote : LocalizedText&lt;br&gt;+ paymentOptions : PaymentOption[]&lt;br&gt;+ inclusions : InclusionItem[]&lt;br&gt;+ itinerary : ItineraryDay[]&lt;br&gt;+ practicalInfo : string[]&lt;br&gt;+ meta : SeoMeta" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="380" y="60" width="270" height="290" as="geometry" />
         </mxCell>
-        <mxCell id="Departure" value="&lt;b&gt;Departure&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ startDate, endDate : Date&lt;br&gt;+ price : Money&lt;br&gt;+ seatsLeft : int&lt;br&gt;+ status : DepartureStatus" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="Departure" value="&lt;b&gt;Departure&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ startDate, endDate : Date&lt;br&gt;+ price : Money&lt;br&gt;+ seatsLeft : int&lt;br&gt;+ status : DepartureStatus" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="760" y="60" width="230" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="ItineraryDay" value="&lt;b&gt;ItineraryDay&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ dayNumber : int&lt;br&gt;+ date : Date&lt;br&gt;+ title, description : LocalizedText&lt;br&gt;+ timeline : TimelineEntry[]&lt;br&gt;+ locations : PointOfInterest[]&lt;br&gt;+ meals : Meals&lt;br&gt;+ notes : string[]" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="ItineraryDay" value="&lt;b&gt;ItineraryDay&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ dayNumber : int&lt;br&gt;+ date : Date&lt;br&gt;+ title, description : LocalizedText&lt;br&gt;+ timeline : TimelineEntry[]&lt;br&gt;+ locations : PointOfInterest[]&lt;br&gt;+ meals : Meals&lt;br&gt;+ notes : string[]" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="760" y="220" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="TimelineEntry" value="&lt;b&gt;TimelineEntry&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ time : string&lt;br&gt;+ text : LocalizedText" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="TimelineEntry" value="&lt;b&gt;TimelineEntry&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ time : string&lt;br&gt;+ text : LocalizedText" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="1090" y="220" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PointOfInterest" value="&lt;b&gt;PointOfInterest&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ name, description : LocalizedText&lt;br&gt;+ image : Media&lt;br&gt;+ coords : GeoPoint" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="PointOfInterest" value="&lt;b&gt;PointOfInterest&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ name, description : LocalizedText&lt;br&gt;+ image : Media&lt;br&gt;+ coords : GeoPoint" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="1090" y="330" width="220" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Meals" value="&lt;b&gt;Meals&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ breakfast, lunch, dinner : bool&lt;br&gt;+ note : LocalizedText" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="Meals" value="&lt;b&gt;Meals&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ breakfast, lunch, dinner : bool&lt;br&gt;+ note : LocalizedText" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="760" y="430" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="InclusionItem" value="&lt;b&gt;InclusionItem&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ label : LocalizedText&lt;br&gt;+ included : bool&lt;br&gt;+ kind : InclusionKind" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="InclusionItem" value="&lt;b&gt;InclusionItem&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ label : LocalizedText&lt;br&gt;+ included : bool&lt;br&gt;+ kind : InclusionKind" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="380" y="400" width="230" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="PaymentOption" value="&lt;b&gt;PaymentOption&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ kind : PaymentKind&lt;br&gt;+ description : LocalizedText" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="PaymentOption" value="&lt;b&gt;PaymentOption&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ kind : PaymentKind&lt;br&gt;+ description : LocalizedText" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="380" y="530" width="230" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Money" value="&lt;b&gt;Money&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ amount : number&lt;br&gt;+ currency : string" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="Money" value="&lt;b&gt;Money&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ amount : number&lt;br&gt;+ currency : string" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="290" width="200" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Enums" value="&lt;b&gt;Перечисления (enum)&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;&lt;b&gt;Availability:&lt;/b&gt; ACTIVE · COMING_SOON · SOLD_OUT · ARCHIVED&lt;br&gt;&lt;b&gt;DepartureStatus:&lt;/b&gt; OPEN · FEW_SEATS · SOLD_OUT&lt;br&gt;&lt;b&gt;InclusionKind:&lt;/b&gt; MEALS · TRANSFER · GUIDE · TICKETS · INSURANCE · FLIGHTS&lt;br&gt;&lt;b&gt;PaymentKind:&lt;/b&gt; FULL · BANK_INSTALLMENT · INTERNAL_INSTALLMENT" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="Enums" value="&lt;b&gt;Перечисления (enum)&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;&lt;b&gt;Availability:&lt;/b&gt; ACTIVE · COMING_SOON · SOLD_OUT · ARCHIVED&lt;br&gt;&lt;b&gt;DepartureStatus:&lt;/b&gt; OPEN · FEW_SEATS · SOLD_OUT&lt;br&gt;&lt;b&gt;InclusionKind:&lt;/b&gt; MEALS · TRANSFER · GUIDE · TICKETS · INSURANCE · FLIGHTS&lt;br&gt;&lt;b&gt;PaymentKind:&lt;/b&gt; FULL · BANK_INSTALLMENT · INTERNAL_INSTALLMENT" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="400" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="note" value="OfferSummary — лёгкая карточка для списков (главная, /dashboard).&#10;Offer — полная модель детальной страницы /offers/[id], грузится отдельным запросом.&#10;LocalizedText = { ru, en } — i18n контента живёт в CMS, а не в i18n/locales/*.json." style="text;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#555555;" vertex="1" parent="1">
+        <mxCell id="note" value="OfferSummary — лёгкая карточка для списков (главная, /dashboard).&#10;Offer — полная модель детальной страницы /offers/[id], грузится отдельным запросом.&#10;LocalizedText = { ru, en } — i18n контента живёт в CMS, а не в i18n/locales/*.json." style="text;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="700" y="560" width="640" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="e1" value="detail (расширяет)" style="endArrow=block;endFill=0;dashed=1;html=1;fontSize=11;" edge="1" parent="1" source="OfferSummary" target="Offer">
+        <mxCell id="e1" value="detail (расширяет)" style="endArrow=block;endFill=0;dashed=1;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="OfferSummary" target="Offer">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e2" value="1..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;" edge="1" parent="1" source="Offer" target="Departure">
+        <mxCell id="e2" value="1..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Offer" target="Departure">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="1..* {composition}" style="endArrow=open;startArrow=diamondThin;startFill=1;html=1;fontSize=11;" edge="1" parent="1" source="Offer" target="ItineraryDay">
+        <mxCell id="e3" value="1..* {composition}" style="endArrow=open;startArrow=diamondThin;startFill=1;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Offer" target="ItineraryDay">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="2..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;" edge="1" parent="1" source="Offer" target="InclusionItem">
+        <mxCell id="e4" value="2..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Offer" target="InclusionItem">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e5" value="0..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;" edge="1" parent="1" source="Offer" target="PaymentOption">
+        <mxCell id="e5" value="0..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Offer" target="PaymentOption">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e6" value="priceFrom" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="Offer" target="Money">
+        <mxCell id="e6" value="priceFrom" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Offer" target="Money">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e7" value="0..* {composition}" style="endArrow=open;startArrow=diamondThin;startFill=1;html=1;fontSize=11;" edge="1" parent="1" source="ItineraryDay" target="TimelineEntry">
+        <mxCell id="e7" value="0..* {composition}" style="endArrow=open;startArrow=diamondThin;startFill=1;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ItineraryDay" target="TimelineEntry">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e8" value="0..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;" edge="1" parent="1" source="ItineraryDay" target="PointOfInterest">
+        <mxCell id="e8" value="0..*" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ItineraryDay" target="PointOfInterest">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e9" value="1" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="ItineraryDay" target="Meals">
+        <mxCell id="e9" value="1" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ItineraryDay" target="Meals">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e10" value="price" style="endArrow=open;html=1;fontSize=11;exitX=0;exitY=0.5;entryX=1;entryY=0;" edge="1" parent="1" source="Departure" target="Money">
+        <mxCell id="e10" value="price" style="endArrow=open;html=1;fontSize=11;exitX=0;exitY=0.5;entryX=1;entryY=0;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Departure" target="Money">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

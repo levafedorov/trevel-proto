@@ -4,73 +4,73 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="Версия C — Вкладки / прогрессивное раскрытие · компонентная архитектура" style="text;html=1;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+        <mxCell id="title" value="Версия C — Вкладки / прогрессивное раскрытие · компонентная архитектура" style="text;html=1;fontSize=16;fontStyle=1;align=left;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="40" y="10" width="900" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="page" value="offers/[id].vue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="page" value="offers/[id].vue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="360" y="60" width="180" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="fetch" value="useOfferDetail(slug)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="fetch" value="useOfferDetail(slug)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="600" y="60" width="200" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="guard" value="состояние?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="guard" value="состояние?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="380" y="140" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="skel" value="OfferSkeleton" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="skel" value="OfferSkeleton" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="60" y="140" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="errstates" value="NotFound / Error + retry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="errstates" value="NotFound / Error + retry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="60" y="200" width="150" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="shell" value="OfferShell&#10;(hero + nav + outlet + sidebar)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="shell" value="OfferShell&#10;(hero + nav + outlet + sidebar)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="350" y="250" width="240" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="hero" value="OfferHero&#10;(над навигацией)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="hero" value="OfferHero&#10;(над навигацией)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="300" y="340" width="180" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="nav" value="SectionNav&#10;(sticky · scroll-spy · deep-link)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbf7d0;strokeColor=#16a34a;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="nav" value="SectionNav&#10;(sticky · scroll-spy · deep-link)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbf7d0;strokeColor=#16a34a;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="300" y="400" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="outlet" value="SectionOutlet&#10;(активный раздел)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbf7d0;strokeColor=#16a34a;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="outlet" value="SectionOutlet&#10;(активный раздел)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbf7d0;strokeColor=#16a34a;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="300" y="475" width="200" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="p1" value="OverviewPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="p1" value="OverviewPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="100" y="560" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="p2" value="ItineraryPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="p2" value="ItineraryPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="290" y="560" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="p3" value="InclusionsPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="p3" value="InclusionsPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="480" y="560" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="p4" value="DeparturesPanel&#10;(даты · места · цена)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="p4" value="DeparturesPanel&#10;(даты · места · цена)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="100" y="620" width="150" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="p5" value="ReviewsPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="p5" value="ReviewsPanel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="290" y="625" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="daycard" value="ItineraryDayCard × N" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="daycard" value="ItineraryDayCard × N" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="480" y="625" width="170" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="aside" value="BookingSidebar&#10;(sticky · всегда виден)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="aside" value="BookingSidebar&#10;(sticky · всегда виден)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="640" y="340" width="190" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="modal" value="BookingModal&#10;(существующий)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="modal" value="BookingModal&#10;(существующий)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="640" y="420" width="190" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="navref" value="⇢ Модель навигации (SectionDescriptor): см. страницу 2" style="text;html=1;align=left;fontSize=12;fontColor=#16a34a;" vertex="1" parent="1">
+        <mxCell id="navref" value="⇢ Модель навигации (SectionDescriptor): см. страницу 2" style="text;html=1;align=left;fontSize=12;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="520" y="410" width="340" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ec1" style="endArrow=open;html=1;" edge="1" parent="1" source="page" target="fetch"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec2" style="endArrow=open;html=1;" edge="1" parent="1" source="page" target="guard"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec3" value="pending" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="guard" target="skel"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec4" value="error" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="guard" target="errstates"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec5" value="success" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="guard" target="shell"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec3" value="pending" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="guard" target="skel"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec4" value="error" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="guard" target="errstates"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec5" value="success" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="guard" target="shell"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec6" style="endArrow=open;html=1;" edge="1" parent="1" source="shell" target="hero"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec7" style="endArrow=open;html=1;" edge="1" parent="1" source="shell" target="nav"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec8" style="endArrow=open;html=1;" edge="1" parent="1" source="shell" target="outlet"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec9" style="endArrow=open;html=1;" edge="1" parent="1" source="shell" target="aside"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec10" value="активный якорь" style="endArrow=open;startArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="nav" target="outlet"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ec10" value="активный якорь" style="endArrow=open;startArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="nav" target="outlet"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec11" style="endArrow=open;html=1;" edge="1" parent="1" source="outlet" target="p1"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec12" style="endArrow=open;html=1;" edge="1" parent="1" source="outlet" target="p2"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="ec13" style="endArrow=open;html=1;" edge="1" parent="1" source="outlet" target="p3"><mxGeometry relative="1" as="geometry" /></mxCell>
@@ -86,19 +86,19 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ntitle" value="Версия C — модель навигации (разделы строятся из наличия данных)" style="text;html=1;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+        <mxCell id="ntitle" value="Версия C — модель навигации (разделы строятся из наличия данных)" style="text;html=1;fontSize=16;fontStyle=1;align=left;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="40" y="10" width="820" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="navc" value="&lt;b&gt;SectionNav&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ visibleSections : SectionDescriptor[]&lt;br&gt;+ activeKey : string&lt;br&gt;+ scrollTo(anchor)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#bbf7d0;strokeColor=#16a34a;" vertex="1" parent="1">
+        <mxCell id="navc" value="&lt;b&gt;SectionNav&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ visibleSections : SectionDescriptor[]&lt;br&gt;+ activeKey : string&lt;br&gt;+ scrollTo(anchor)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#bbf7d0;strokeColor=#16a34a;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="120" y="90" width="260" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="desc" value="&lt;b&gt;SectionDescriptor&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ key : string&lt;br&gt;+ anchor : string&lt;br&gt;+ label : LocalizedText&lt;br&gt;+ panel : Component&lt;br&gt;+ hasData : bool" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="desc" value="&lt;b&gt;SectionDescriptor&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ key : string&lt;br&gt;+ anchor : string&lt;br&gt;+ label : LocalizedText&lt;br&gt;+ panel : Component&lt;br&gt;+ hasData : bool" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="560" y="80" width="240" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="nnote" value="В меню попадают только разделы с hasData=true. Нет программы → нет вкладки «Программа». URL-хэш (#itinerary) открывает нужный раздел; хэш на скрытый раздел → мягкий fallback на первый доступный." style="text;html=1;align=left;fontSize=12;fontColor=#555555;" vertex="1" parent="1">
+        <mxCell id="nnote" value="В меню попадают только разделы с hasData=true. Нет программы → нет вкладки «Программа». URL-хэш (#itinerary) открывает нужный раздел; хэш на скрытый раздел → мягкий fallback на первый доступный." style="text;html=1;align=left;fontSize=12;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="120" y="250" width="680" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ne1" value="0..* показывает только hasData" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;" edge="1" parent="1" source="navc" target="desc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ne1" value="0..* показывает только hasData" style="endArrow=open;startArrow=diamondThin;startFill=0;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="navc" target="desc"><mxGeometry relative="1" as="geometry" /></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -107,59 +107,59 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ctitle" value="Версия C — состояния (построение навигации + deep-link + бронь)" style="text;html=1;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+        <mxCell id="ctitle" value="Версия C — состояния (построение навигации + deep-link + бронь)" style="text;html=1;fontSize=16;fontStyle=1;align=left;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="40" y="10" width="820" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="init" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+        <mxCell id="init" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="70" y="70" width="24" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="loading" value="Loading" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="loading" value="Loading" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="140" y="60" width="130" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="notfound" value="NotFound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="notfound" value="NotFound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="140" y="165" width="130" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="error" value="Error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="error" value="Error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="140" y="255" width="130" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="ready" value="Ready" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="ready" value="Ready" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=8;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="360" y="55" width="520" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="buildnav" value="BuildNav" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="buildnav" value="BuildNav" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="390" y="100" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="showsec" value="ShowSection&#10;(hasData → в меню)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="showsec" value="ShowSection&#10;(hasData → в меню)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="390" y="175" width="170" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="hidesec" value="HideSection&#10;(нет данных → скрыть вкладку)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="hidesec" value="HideSection&#10;(нет данных → скрыть вкладку)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="620" y="175" width="220" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="deeplinked" value="DeepLinked&#10;(URL c #anchor)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="deeplinked" value="DeepLinked&#10;(URL c #anchor)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="390" y="250" width="160" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="default" value="Default&#10;(без хэша → первый раздел)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="default" value="Default&#10;(без хэша → первый раздел)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="600" y="250" width="200" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="bookable" value="Bookable" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="bookable" value="Bookable" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="390" y="330" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="disabled" value="Disabled (COMING_SOON)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="disabled" value="Disabled (COMING_SOON)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="560" y="325" width="180" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="waitlist" value="Waitlist (SOLD_OUT)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="waitlist" value="Waitlist (SOLD_OUT)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="560" y="378" width="180" height="35" as="geometry" />
         </mxCell>
         <mxCell id="cse1" style="endArrow=open;html=1;" edge="1" parent="1" source="init" target="loading"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse2" value="200 OK" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="loading" target="ready"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse3" value="404" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="loading" target="notfound"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse4" value="5xx / timeout" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="loading" target="error"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse5" value="retry()" style="endArrow=open;html=1;dashed=1;fontSize=11;" edge="1" parent="1" source="error" target="loading"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse6" value="hasData" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="buildnav" target="showsec"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse7" value="нет данных" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="buildnav" target="hidesec"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse8" value="#anchor" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="showsec" target="deeplinked"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse9" value="без хэша" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="showsec" target="default"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse10" value="COMING_SOON" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="bookable" target="disabled"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="cse11" value="SOLD_OUT" style="endArrow=open;html=1;fontSize=11;" edge="1" parent="1" source="bookable" target="waitlist"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse2" value="200 OK" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="loading" target="ready"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse3" value="404" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="loading" target="notfound"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse4" value="5xx / timeout" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="loading" target="error"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse5" value="retry()" style="endArrow=open;html=1;dashed=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="error" target="loading"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse6" value="hasData" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="buildnav" target="showsec"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse7" value="нет данных" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="buildnav" target="hidesec"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse8" value="#anchor" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="showsec" target="deeplinked"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse9" value="без хэша" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="showsec" target="default"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse10" value="COMING_SOON" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="bookable" target="disabled"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cse11" value="SOLD_OUT" style="endArrow=open;html=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="bookable" target="waitlist"><mxGeometry relative="1" as="geometry" /></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
