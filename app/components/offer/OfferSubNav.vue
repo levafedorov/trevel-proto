@@ -1,6 +1,11 @@
 <template>
-  <!-- Desktop only: sticky scroll-spy tabs + compact price + book CTA. -->
-  <nav class="hidden lg:block sticky top-16 z-30 bg-[#faf8f5]/95 backdrop-blur border-b border-stone-200/70">
+  <!-- Desktop only: sticky scroll-spy tabs + compact price + book CTA.
+       `top` tracks the navbar's bottom edge so the bar docks under it while the
+       navbar is visible and slides up to the very top when it hides. -->
+  <nav
+    class="hidden lg:block sticky z-30 bg-[#faf8f5]/95 backdrop-blur border-b border-stone-200/70"
+    :style="navStyle"
+  >
     <UContainer>
       <div class="flex items-center justify-between h-14">
         <ul class="flex items-center gap-1">
@@ -46,6 +51,18 @@ const emit = defineEmits<{ navigate: [id: string] }>()
 const { money } = useLocalizedText()
 const bookingModal = useOfferBooking()
 const booking = useBookingState(() => props.offer.availability)
+
+// AppNavbar is h-20 (80px) at the lg breakpoint where this sub-nav is shown.
+const NAVBAR_HEIGHT = 80
+const { isVisible } = useScrollNavbar()
+
+// Dock under the navbar (top: 80) while it's visible; slide to the top (0) when
+// it hides. Transition matches the navbar's own 300ms slide, so the reveal
+// visually pushes this bar down and the hide lets it take the navbar's place.
+const navStyle = computed(() => ({
+  top: `${isVisible.value ? NAVBAR_HEIGHT : 0}px`,
+  transition: 'top 300ms ease',
+}))
 
 function onBook() {
   if (!booking.disabled.value) bookingModal.open()

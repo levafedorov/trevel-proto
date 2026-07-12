@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-16 bg-[#faf8f5] min-h-screen">
+  <div class="pt-16 lg:pt-20 bg-[#faf8f5] min-h-screen">
     <OfferSkeleton v-if="pending" />
     <OfferError v-else-if="error" @retry="retry" />
     <OfferNotFound v-else-if="notFound || !offer" />
