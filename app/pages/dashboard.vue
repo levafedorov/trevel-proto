@@ -47,7 +47,7 @@
         <div v-if="filteredOffers.length" :key="activeFilter" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <OfferCard
             v-for="offer in filteredOffers"
-            :key="offer.id"
+            :key="offer.slug"
             :offer="offer"
             show-status
           />
@@ -67,27 +67,34 @@
 </template>
 
 <script setup lang="ts">
+import { Availability } from '~/domain/offer/types'
+import type { OfferSummary } from '~/domain/offer/types'
+
 const { t } = useI18n()
 const { offers } = useOffers()
 
 useSeoMeta({
-  title: 'All Turkey Tours – OlimpiaTour',
+  title: 'All Turkey Tours – LovEnRoute',
   description: 'Browse our full collection of handcrafted Turkey travel experiences — Istanbul, Cappadocia, Antalya, and more.',
 })
 
-const activeFilter = ref<'all' | 'active' | 'inactive'>('all')
+type FilterValue = 'all' | 'active' | 'inactive'
 
-const filters = computed(() => [
+const activeFilter = ref<FilterValue>('all')
+
+const isActive = (offer: OfferSummary) => offer.availability === Availability.ACTIVE
+
+const filters = computed<Array<{ value: FilterValue, label: string, count: number }>>(() => [
   { value: 'all', label: t('dashboard.filterAll'), count: offers.length },
-  { value: 'active', label: t('dashboard.filterActive'), count: offers.filter(o => o.active).length },
-  { value: 'inactive', label: t('dashboard.filterInactive'), count: offers.filter(o => !o.active).length },
+  { value: 'active', label: t('dashboard.filterActive'), count: offers.filter(isActive).length },
+  { value: 'inactive', label: t('dashboard.filterInactive'), count: offers.filter(o => !isActive(o)).length },
 ])
 
 const filteredOffers = computed(() => {
   let result = [...offers]
 
-  if (activeFilter.value === 'active') result = result.filter(o => o.active)
-  if (activeFilter.value === 'inactive') result = result.filter(o => !o.active)
+  if (activeFilter.value === 'active') result = result.filter(isActive)
+  if (activeFilter.value === 'inactive') result = result.filter(o => !isActive(o))
 
   return result
 })

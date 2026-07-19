@@ -62,11 +62,11 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'OlimpiaTour – Turkey Travel Specialists',
+      title: 'LovEnRoute – Turkey Travel Specialists',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'OlimpiaTour — Turkey travel specialists. Handcrafted journeys to Istanbul, Cappadocia, the Aegean coast, and beyond.' },
+        { name: 'description', content: 'LovEnRoute — Turkey travel specialists. Handcrafted journeys to Istanbul, Cappadocia, the Aegean coast, and beyond.' },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

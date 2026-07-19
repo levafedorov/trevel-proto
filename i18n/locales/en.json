@@ -2,7 +2,6 @@
   "nav": {
     "home": "Home",
     "destinations": "Tours",
-    "reviews": "Reviews",
     "contacts": "Contacts",
     "about": "About",
     "explore": "View Tours"
@@ -99,44 +98,64 @@
     "email": "Email"
   },
 
-  "reviews": {
-    "eyebrow": "Reviews",
-    "title": "What Our Guests Say",
-    "subtitle": "Impressions from travellers who saw the real Turkey.",
-    "items": {
-      "one": {
-        "name": "Elena",
-        "location": "Moscow",
-        "text": "I never imagined Turkey could be like this. Every day was a new discovery, and the care they took of us was incredible."
-      },
-      "two": {
-        "name": "Irina & Sergey",
-        "location": "Almaty",
-        "text": "Secret coves, family restaurants, a Russian-speaking guide — everything thought through to the last detail. We'll definitely be back!"
-      },
-      "three": {
-        "name": "Natalia",
-        "location": "Saint Petersburg",
-        "text": "We swam in two seas in a single day! The best trip across Turkey we have ever had."
-      }
-    }
-  },
-
   "offerPage": {
-    "notFound": "This tour could not be found.",
-    "backToDashboard": "Back to All Tours",
-    "aboutTrip": "About This Journey",
-    "highlights": "Highlights",
-    "iAmIn": "I'm In – Book Now",
-    "unavailable": "Coming Soon",
-    "unavailableHint": "This tour is not yet open for bookings — check back soon.",
-    "noCommitment": "No payment required — we'll be in touch within 24 hours.",
-    "includes": {
-      "flights": "Return flights included",
-      "hotel": "Boutique hotel or cave accommodation",
-      "guide": "Russian-speaking guide",
-      "insurance": "Travel insurance"
-    }
+    "nav": {
+      "overview": "Overview",
+      "itinerary": "Itinerary",
+      "inclusions": "What's included",
+      "practical": "Good to know",
+      "departures": "Departures"
+    },
+    "cta": {
+      "book": "Book now",
+      "comingSoon": "Coming soon",
+      "waitlist": "Join waitlist",
+      "hint": "No payment required — we'll be in touch within 24 hours"
+    },
+    "stats": {
+      "days": "days",
+      "nights": "nights",
+      "group": "guests",
+      "guide": "guide"
+    },
+    "overview": {
+      "title": "About this journey"
+    },
+    "itinerary": {
+      "title": "Day by day",
+      "hint": "tap a day to expand"
+    },
+    "inclusions": {
+      "title": "What's included in the tour",
+      "included": "Included in the price",
+      "excluded": "Not included"
+    },
+    "practical": {
+      "title": "Good to know"
+    },
+    "meals": {
+      "breakfast": "breakfast",
+      "lunch": "lunch",
+      "dinner": "dinner"
+    },
+    "departures": {
+      "title": "Departures",
+      "nearest": "Next departure",
+      "book": "Book"
+    },
+    "states": {
+      "notFound": {
+        "title": "Tour not found",
+        "subtitle": "It may be archived, or the link is out of date.",
+        "back": "Back to tours"
+      },
+      "error": {
+        "title": "Something went wrong",
+        "subtitle": "We couldn't load the tour. Please try again.",
+        "retry": "Retry"
+      }
+    },
+    "perPerson": "per person"
   },
 
   "booking": {

@@ -19,7 +19,7 @@
             </svg>
           </span>
           <span class="font-serif text-xl font-bold text-stone-900">
-            OlimpiaTour
+            LovEnRoute
           </span>
         </NuxtLink>
 
@@ -141,12 +141,11 @@ const mobileMenuOpen = ref(false)
 const localeOptions = [
   { code: 'en', label: 'EN' },
   { code: 'ru', label: 'RU' },
-]
+] as const
 
 const navLinks = computed(() => [
   { to: '/', label: t('nav.home'), icon: 'i-lucide-home' },
   { to: '/dashboard', label: t('nav.destinations'), icon: 'i-lucide-map' },
-  { to: '/reviews', label: t('nav.reviews'), icon: 'i-lucide-star' },
   { to: '/about', label: t('nav.about'), icon: 'i-lucide-info' },
   { to: '/contacts', label: t('nav.contacts'), icon: 'i-lucide-phone' },
 ])

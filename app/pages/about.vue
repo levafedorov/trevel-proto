@@ -115,8 +115,8 @@ import managerPhoto from '~/assets/images/director-photo.jpeg'
 const { t } = useI18n()
 
 useSeoMeta({
-  title: 'About Us – OlimpiaTour',
-  description: 'Learn about OlimpiaTour — signature tours across Turkey, from someone who truly lives this country.',
+  title: 'About Us – LovEnRoute',
+  description: 'Learn about LovEnRoute — signature tours across Turkey, from someone who truly lives this country.',
 })
 
 // Emoji are language-neutral and live here; only the label text is translated.

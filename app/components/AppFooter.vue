@@ -11,7 +11,7 @@
                 <path d="M14 6c-1.5 3-4 5-8 6 0 4 2 7.5 8 10 6-2.5 8-6 8-10-4-1-6.5-3-8-6z" fill="currentColor"/>
               </svg>
             </span>
-            <span class="font-serif text-xl font-bold text-white">OlimpiaTour</span>
+            <span class="font-serif text-xl font-bold text-white">LovEnRoute</span>
           </div>
           <p class="text-stone-400 text-sm leading-relaxed max-w-xs">
             {{ $t('footer.tagline') }}
@@ -62,7 +62,7 @@
             </li>
             <li class="flex items-center gap-2 text-sm text-stone-400">
               <UIcon name="i-lucide-mail" class="w-4 h-4 text-amber-500 shrink-0" />
-              hello@olimpiatour.travel
+              hello@lovenroute.travel
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@
 
       <div class="border-t border-stone-800 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-stone-500 text-sm">
-          © {{ new Date().getFullYear() }} OlimpiaTour. {{ $t('footer.rights') }}
+          © {{ new Date().getFullYear() }} LovEnRoute. {{ $t('footer.rights') }}
         </p>
         <p class="text-stone-600 text-xs">
           {{ $t('footer.crafted') }}
@@ -94,7 +94,6 @@ const socials = [
 const quickLinks = computed(() => [
   { to: '/', label: t('nav.home') },
   { to: '/dashboard', label: t('nav.destinations') },
-  { to: '/reviews', label: t('nav.reviews') },
   { to: '/about', label: t('nav.about') },
   { to: '/contacts', label: t('nav.contacts') },
 ])

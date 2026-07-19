@@ -1,32 +1,44 @@
-export function useScrollNavbar() {
-  const isVisible = ref(true)
-  const lastScrollY = ref(0)
-  let hideTimer: ReturnType<typeof setTimeout> | null = null
+/**
+ * Shared navbar visibility driven by scroll direction: hides on scroll-down,
+ * shows on scroll-up (and after a short pause). Module-scoped singleton so every
+ * consumer — the navbar itself and the offer sub-nav that docks under it — reads
+ * the exact same `isVisible`, staying perfectly in sync.
+ */
+const isVisible = ref(true)
+let lastScrollY = 0
+let hideTimer: ReturnType<typeof setTimeout> | null = null
+let listeners = 0
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY
+function handleScroll() {
+  const currentScrollY = window.scrollY
 
-    if (currentScrollY > lastScrollY.value && currentScrollY > 80) {
-      isVisible.value = false
-    } else {
-      isVisible.value = true
-    }
-
-    lastScrollY.value = currentScrollY
-
-    if (hideTimer) clearTimeout(hideTimer)
-    hideTimer = setTimeout(() => {
-      isVisible.value = true
-    }, 600)
+  if (currentScrollY > lastScrollY && currentScrollY > 80) {
+    isVisible.value = false
+  }
+  else {
+    isVisible.value = true
   }
 
+  lastScrollY = currentScrollY
+
+  if (hideTimer) clearTimeout(hideTimer)
+  hideTimer = setTimeout(() => {
+    isVisible.value = true
+  }, 600)
+}
+
+export function useScrollNavbar() {
   onMounted(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
+    if (listeners === 0) window.addEventListener('scroll', handleScroll, { passive: true })
+    listeners++
   })
 
   onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
-    if (hideTimer) clearTimeout(hideTimer)
+    listeners--
+    if (listeners === 0) {
+      window.removeEventListener('scroll', handleScroll)
+      if (hideTimer) clearTimeout(hideTimer)
+    }
   })
 
   return { isVisible }
