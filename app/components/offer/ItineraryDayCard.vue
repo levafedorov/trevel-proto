@@ -17,24 +17,18 @@
         <p v-for="(paragraph, i) in day.body" :key="i">{{ localize(paragraph) }}</p>
       </div>
 
-      <!-- Meals covered by the price on this day -->
-      <div v-if="meals.length" class="flex flex-wrap gap-2 mt-4">
-        <span
-          v-for="meal in meals"
-          :key="meal.key"
-          class="inline-flex items-center gap-1.5 text-xs text-amber-800 bg-amber-50 rounded-full px-2.5 py-1"
+      <!-- Meal / logistics notes as coloured badges: green = included, amber = caveat. -->
+      <div v-if="day.notes.length" class="mt-4 space-y-2">
+        <div
+          v-for="(note, i) in day.notes"
+          :key="i"
+          class="flex items-start gap-1.5 text-xs font-semibold rounded-lg border px-3 py-2"
+          :class="toneClass[note.tone]"
         >
-          <UIcon :name="meal.icon" class="w-3.5 h-3.5" />
-          {{ meal.label }}
-        </span>
+          <UIcon :name="toneIcon[note.tone]" class="w-3.5 h-3.5 shrink-0 mt-px" />
+          <span>{{ localize(note.text) }}</span>
+        </div>
       </div>
-
-      <ul v-if="day.notes.length" class="mt-4 space-y-1">
-        <li v-for="(note, i) in day.notes" :key="i" class="text-stone-400 text-xs flex gap-1.5">
-          <UIcon name="i-lucide-info" class="w-3.5 h-3.5 shrink-0 mt-0.5" />
-          {{ localize(note) }}
-        </li>
-      </ul>
 
       <PoiList v-if="day.pois.length" :pois="day.pois" class="mt-4" />
     </div>
@@ -43,28 +37,26 @@
 
 <script setup lang="ts">
 import type { ItineraryDay } from '~/domain/offer/types'
+import { NoteTone } from '~/domain/offer/types'
 import DayTimeline from './DayTimeline.vue'
 import PoiList from './PoiList.vue'
 
-const props = defineProps<{
+defineProps<{
   day: ItineraryDay
   defaultOpen?: boolean
 }>()
 
-const { t } = useI18n()
 const { localize } = useLocalizedText()
 
-const MEAL_ICONS = {
-  breakfast: 'i-lucide-coffee',
-  lunch: 'i-lucide-utensils',
-  dinner: 'i-lucide-wine',
-} as const
+const toneClass: Record<NoteTone, string> = {
+  [NoteTone.POSITIVE]: 'bg-green-50 border-green-200 text-green-700',
+  [NoteTone.CAUTION]: 'bg-amber-50 border-amber-200 text-amber-700',
+}
 
-const meals = computed(() =>
-  (['breakfast', 'lunch', 'dinner'] as const)
-    .filter(key => props.day.meals?.[key])
-    .map(key => ({ key, icon: MEAL_ICONS[key], label: t(`offerPage.meals.${key}`) })),
-)
+const toneIcon: Record<NoteTone, string> = {
+  [NoteTone.POSITIVE]: 'i-lucide-check-circle',
+  [NoteTone.CAUTION]: 'i-lucide-info',
+}
 </script>
 
 <style scoped lang="scss">

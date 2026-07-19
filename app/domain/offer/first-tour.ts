@@ -5,8 +5,8 @@
  * Russian is the source language; English is a faithful translation. Replace with
  * a CMS fetch later (see offerRepository.ts).
  */
-import { Availability, DepartureStatus, InclusionKind, PaymentKind } from './types'
-import type { LocalizedText, Media, Offer } from './types'
+import { Availability, DepartureStatus, InclusionKind, NoteTone, PaymentKind } from './types'
+import type { DayNote, LocalizedText, Media, Offer } from './types'
 
 // Real photography (days 1–4). Vite resolves these imports to hashed URLs.
 import heroImg from '~/assets/images/first-tour/second-day.jpeg'
@@ -21,6 +21,10 @@ import sirinceImg from '~/assets/images/first-tour/efes-1.jpeg'
 
 /** Compact bilingual literal. */
 const t = (ru: string, en: string): LocalizedText => ({ ru, en })
+
+/** Day-note builders: `good` for what's included, `warn` for caveats / extra cost. */
+const good = (ru: string, en: string): DayNote => ({ tone: NoteTone.POSITIVE, text: t(ru, en) })
+const warn = (ru: string, en: string): DayNote => ({ tone: NoteTone.CAUTION, text: t(ru, en) })
 
 /**
  * Placeholder for scenes we have no real photo of yet (days 5–7, Pamukkale).
@@ -120,7 +124,7 @@ export const aegeanPearls: Offer = {
         { label: t('Часовая башня', 'Clock Tower'), image: { src: clockTowerImg, alt: t('Часовая башня Измира', 'Izmir Clock Tower') } },
         { label: t('Кемералты', 'Kemeralti'), image: { src: kemeraltiImg, alt: t('Базар Кемералты', 'Kemeralti bazaar') } },
       ],
-      notes: [t('Стоимость обеда и напитков оплачивается гостями', 'Lunch and drinks are paid by guests')],
+      notes: [warn('Стоимость обеда и напитков оплачивается гостями', 'Lunch and drinks are paid by guests')],
       meals: { breakfast: true },
     },
     {
@@ -145,7 +149,7 @@ export const aegeanPearls: Offer = {
         { label: t('яхта · Кушадасы', 'yacht · Kusadasi'), image: { src: yachtImg, alt: t('Яхта у Кушадасы', 'Yacht near Kusadasi') } },
         { label: t('Пиратский замок', 'Pirate Castle'), image: { src: pirateCastleImg, alt: t('Пиратский замок Кушадасы', 'Kusadasi Pirate Castle') } },
       ],
-      notes: [t('Обед включён · с собой: пляжные вещи, деньги на сувениры', 'Lunch included · bring: beachwear, money for souvenirs')],
+      notes: [good('Обед включён · с собой: пляжные вещи, деньги на сувениры', 'Lunch included · bring: beachwear, money for souvenirs')],
       meals: { breakfast: true, lunch: true },
     },
     {
@@ -180,7 +184,7 @@ export const aegeanPearls: Offer = {
         { label: t('Эфес · Библиотека Цельса', 'Ephesus · Library of Celsus'), image: { src: ephesusImg, alt: t('Библиотека Цельса', 'Library of Celsus') } },
         { label: t('Шириндже', 'Sirince'), image: { src: sirinceImg, alt: t('Деревня Шириндже', 'Sirince village') } },
       ],
-      notes: [t('Обед и напитки входят в стоимость', 'Lunch and drinks are included')],
+      notes: [good('Обед и напитки входят в стоимость', 'Lunch and drinks are included')],
       meals: { breakfast: true, lunch: true },
     },
     {
@@ -198,7 +202,7 @@ export const aegeanPearls: Offer = {
         { label: t('Алачаты', 'Alacati'), image: placeholder('alacati-stone-houses', t('Алачаты', 'Alacati')) },
         { label: t('пляж Илиджа', 'Ilica Beach'), image: placeholder('ilica-beach', t('Пляж Илиджа', 'Ilica Beach')) },
       ],
-      notes: [t('Обед и напитки не входят · с собой: купальные принадлежности', 'Lunch and drinks not included · bring: swimwear')],
+      notes: [warn('Обед и напитки не входят · с собой: купальные принадлежности', 'Lunch and drinks not included · bring: swimwear')],
       meals: { breakfast: true },
     },
     {
@@ -228,7 +232,7 @@ export const aegeanPearls: Offer = {
         { label: t('Памуккале · травертины', 'Pamukkale · travertines'), image: placeholder('pamukkale-white', t('Травертины Памуккале', 'Pamukkale travertines')) },
         { label: t('Бассейн Клеопатры', 'Cleopatra’s Pool'), image: placeholder('cleopatra-pool', t('Бассейн Клеопатры', 'Cleopatra’s Pool')) },
       ],
-      notes: [t('Обед и напитки входят · с собой: купальные принадлежности', 'Lunch and drinks included · bring: swimwear')],
+      notes: [good('Обед и напитки входят · с собой: купальные принадлежности', 'Lunch and drinks included · bring: swimwear')],
       meals: { breakfast: true, lunch: true },
     },
     {

@@ -81,6 +81,23 @@ export interface PointOfInterest {
 }
 
 /**
+ * Semantic tone of a day note — carried by the content, not inferred from its
+ * wording, so a CMS editor picks it explicitly and the UI stays language-safe.
+ */
+export enum NoteTone {
+  /** Good news for the traveller: something is included. Rendered green. */
+  POSITIVE = 'POSITIVE',
+  /** A caveat: not included, an extra cost, or something to bring. Rendered amber. */
+  CAUTION = 'CAUTION',
+}
+
+/** A short logistics/meal note shown as a coloured badge inside a day card. */
+export interface DayNote {
+  tone: NoteTone
+  text: LocalizedText
+}
+
+/**
  * One timed line in a day's schedule. `time` is a `LocalizedText` (not a raw
  * string) because some rows are word labels — "day", "shrines" — rather than a
  * universal "07:00".
@@ -100,8 +117,8 @@ export interface ItineraryDay {
   /** Prose paragraphs for days without a strict schedule. */
   body: LocalizedText[]
   pois: PointOfInterest[]
-  /** Small caveats: "lunch not included", "bring swimwear", … */
-  notes: LocalizedText[]
+  /** Coloured logistics/meal badges: "lunch included", "bring swimwear", … */
+  notes: DayNote[]
   meals?: Meals
 }
 

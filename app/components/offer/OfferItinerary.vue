@@ -109,11 +109,14 @@ const subtitle = computed(() => {
     max-width: none;
   }
 
+  // Single continuous dashed line centred on the node rail, so it threads
+  // through every day node instead of weaving off to the side.
   .tl-wave {
-    left: 23px;
+    left: 22px;
     transform: none;
-    width: 46px;
-    background-size: 46px 170px;
+    width: 2px;
+    opacity: 0.75;
+    background: repeating-linear-gradient(to bottom, #f59e0b 0 6px, transparent 6px 16px);
   }
 
   .tl-row {
