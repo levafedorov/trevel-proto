@@ -37,8 +37,8 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'OlimpiaTour – Turkey Travel Specialists',
-  description: 'Handcrafted Turkey journeys — Istanbul, Cappadocia, the Aegean coast, and beyond. OlimpiaTour takes you to the real Turkey.',
+  title: 'LovEnRoute – Turkey Travel Specialists',
+  description: 'Handcrafted Turkey journeys — Istanbul, Cappadocia, the Aegean coast, and beyond. LovEnRoute takes you to the real Turkey.',
   ogImage: 'https://picsum.photos/seed/wanderlux-og/1200/630',
 })
 </script>

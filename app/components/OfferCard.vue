@@ -37,22 +37,6 @@
           {{ localize(offer.shortDescription) }}
         </p>
 
-        <!-- Rating -->
-        <div class="flex items-center gap-1 mb-4">
-          <div class="flex">
-            <UIcon
-              v-for="n in 5"
-              :key="n"
-              name="i-lucide-star"
-              :class="[
-                'w-3.5 h-3.5',
-                n <= Math.round(offer.rating) ? 'text-amber-400' : 'text-stone-200',
-              ]"
-            />
-          </div>
-          <span class="text-stone-500 text-xs ml-1">{{ offer.rating }} ({{ offer.reviewCount }})</span>
-        </div>
-
         <!-- Footer -->
         <div class="flex items-center justify-between pt-4 border-t border-stone-100">
           <div>

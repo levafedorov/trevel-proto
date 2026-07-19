@@ -165,8 +165,6 @@ export interface OfferSummary {
   durationDays: number
   availability: Availability
   category: string
-  rating: number
-  reviewCount: number
 }
 
 /** Full offer aggregate consumed by the detail page. */
@@ -181,9 +179,9 @@ export interface Offer {
   category: string
   priceFrom: Money
   durationDays: number
-  excursions: number
-  rating: number
-  reviewCount: number
+  nights: number
+  /** Maximum travellers per departure. */
+  groupSize: number
   /** Guide language badge, e.g. 'RU'. */
   guideLanguage: string
   hero: Media

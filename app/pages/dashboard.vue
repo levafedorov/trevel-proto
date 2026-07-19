@@ -74,7 +74,7 @@ const { t } = useI18n()
 const { offers } = useOffers()
 
 useSeoMeta({
-  title: 'All Turkey Tours – OlimpiaTour',
+  title: 'All Turkey Tours – LovEnRoute',
   description: 'Browse our full collection of handcrafted Turkey travel experiences — Istanbul, Cappadocia, Antalya, and more.',
 })
 

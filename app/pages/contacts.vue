@@ -45,8 +45,8 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Contacts – OlimpiaTour',
-  description: 'Get in touch with OlimpiaTour — signature tours across Turkey.',
+  title: 'Contacts – LovEnRoute',
+  description: 'Get in touch with LovEnRoute — signature tours across Turkey.',
 })
 
 // TODO: replace with real contact details once provided.
@@ -64,7 +64,7 @@ const contacts = computed(() => [
   {
     icon: 'i-lucide-mail',
     label: t('contacts.email'),
-    value: 'hello@olimpiatour.travel',
+    value: 'hello@lovenroute.travel',
   },
 ])
 </script>

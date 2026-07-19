@@ -21,7 +21,7 @@ const { data: offer, pending, error, notFound, retry } = useOfferDetail(slug.val
 const { localize } = useLocalizedText()
 
 useSeoMeta({
-  title: () => (offer.value ? localize(offer.value.meta.title) : 'OlimpiaTour'),
+  title: () => (offer.value ? localize(offer.value.meta.title) : 'LovEnRoute'),
   description: () => (offer.value ? localize(offer.value.meta.description) : ''),
   ogImage: () => offer.value?.meta.ogImage ?? '',
 })

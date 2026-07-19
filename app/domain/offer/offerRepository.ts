@@ -20,8 +20,6 @@ export function toSummary(offer: Offer): OfferSummary {
     durationDays: offer.durationDays,
     availability: offer.availability,
     category: offer.category,
-    rating: offer.rating,
-    reviewCount: offer.reviewCount,
   }
 }
 

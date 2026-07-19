@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-## Project: OlimpiaTour Touristic Platform
+## Project: LovEnRoute Touristic Platform
 
 A premium travel agency web platform built with Nuxt 4.
 

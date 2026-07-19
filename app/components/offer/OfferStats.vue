@@ -20,8 +20,8 @@ const { t } = useI18n()
 
 const stats = computed(() => [
   { value: props.offer.durationDays, label: t('offerPage.stats.days') },
-  { value: props.offer.excursions, label: t('offerPage.stats.excursions') },
-  { value: props.offer.rating, label: t('offerPage.stats.reviews', { count: props.offer.reviewCount }) },
+  { value: props.offer.nights, label: t('offerPage.stats.nights') },
+  { value: props.offer.groupSize, label: t('offerPage.stats.group') },
   { value: props.offer.guideLanguage, label: t('offerPage.stats.guide') },
 ])
 </script>

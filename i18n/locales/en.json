@@ -2,7 +2,6 @@
   "nav": {
     "home": "Home",
     "destinations": "Tours",
-    "reviews": "Reviews",
     "contacts": "Contacts",
     "about": "About",
     "explore": "View Tours"
@@ -99,29 +98,6 @@
     "email": "Email"
   },
 
-  "reviews": {
-    "eyebrow": "Reviews",
-    "title": "What Our Guests Say",
-    "subtitle": "Impressions from travellers who saw the real Turkey.",
-    "items": {
-      "one": {
-        "name": "Elena",
-        "location": "Moscow",
-        "text": "I never imagined Turkey could be like this. Every day was a new discovery, and the care they took of us was incredible."
-      },
-      "two": {
-        "name": "Irina & Sergey",
-        "location": "Almaty",
-        "text": "Secret coves, family restaurants, a Russian-speaking guide — everything thought through to the last detail. We'll definitely be back!"
-      },
-      "three": {
-        "name": "Natalia",
-        "location": "Saint Petersburg",
-        "text": "We swam in two seas in a single day! The best trip across Turkey we have ever had."
-      }
-    }
-  },
-
   "offerPage": {
     "nav": {
       "overview": "Overview",
@@ -138,8 +114,8 @@
     },
     "stats": {
       "days": "days",
-      "excursions": "excursions",
-      "reviews": "{count} reviews",
+      "nights": "nights",
+      "group": "guests",
       "guide": "guide"
     },
     "overview": {
