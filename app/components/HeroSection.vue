@@ -9,8 +9,8 @@
       }"
     />
 
-    <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/65" />
+    <!-- Warm amber wash — "yellow glasses" tint instead of a dark mask -->
+    <div class="absolute inset-0 bg-gradient-to-b from-amber-900/35 via-amber-800/25 to-amber-950/60" />
 
     <!-- Content -->
     <UContainer class="relative z-10 text-center text-white px-4">

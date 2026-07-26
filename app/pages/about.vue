@@ -1,12 +1,12 @@
 <template>
   <div class="pt-16">
     <!-- Page Hero -->
-    <section class="relative py-28 overflow-hidden bg-stone-900">
+    <section class="relative py-28 overflow-hidden bg-amber-950">
       <div
-        class="absolute inset-0 bg-cover bg-center opacity-30"
+        class="absolute inset-0 bg-cover bg-center opacity-40"
         style="background-image: url('https://picsum.photos/seed/about-hero/1920/600');"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-900/40" />
+      <div class="absolute inset-0 bg-gradient-to-r from-amber-950/75 to-amber-900/35" />
       <UContainer class="relative z-10">
         <p class="text-amber-400 font-medium tracking-widest text-sm uppercase mb-4">
           {{ $t('about.eyebrow') }}

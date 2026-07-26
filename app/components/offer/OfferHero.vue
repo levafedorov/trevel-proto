@@ -21,7 +21,7 @@
           >
         </button>
 
-        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+        <div class="absolute inset-0 bg-gradient-to-t from-amber-950/30 to-transparent pointer-events-none" />
 
         <template v-if="slides.length > 1">
           <button
