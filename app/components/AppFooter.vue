@@ -56,13 +56,26 @@
               <UIcon name="i-lucide-map-pin" class="w-4 h-4 mt-0.5 text-amber-500 shrink-0" />
               Izmir, Turkey
             </li>
-            <li class="flex items-center gap-2 text-sm text-stone-400">
-              <UIcon name="i-lucide-phone" class="w-4 h-4 text-amber-500 shrink-0" />
-              +90 000 000 00 00
+            <li
+              v-for="phone in phones"
+              :key="phone.tel"
+              class="flex items-start gap-2 text-sm text-stone-400"
+            >
+              <UIcon name="i-lucide-phone" class="w-4 h-4 mt-0.5 text-amber-500 shrink-0" />
+              <span>
+                <a :href="`tel:${phone.tel}`" class="hover:text-amber-400 transition-colors">
+                  {{ phone.flag }} {{ phone.number }}
+                </a>
+                <span class="block text-stone-500 text-xs mt-0.5">
+                  {{ phone.apps.map(app => app.name).join(' · ') }}
+                </span>
+              </span>
             </li>
             <li class="flex items-center gap-2 text-sm text-stone-400">
               <UIcon name="i-lucide-mail" class="w-4 h-4 text-amber-500 shrink-0" />
-              hello@lovenroute.travel
+              <a href="mailto:hello@lovenroute.travel" class="hover:text-amber-400 transition-colors">
+                hello@lovenroute.travel
+              </a>
             </li>
           </ul>
         </div>
@@ -82,6 +95,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const { phones } = useContacts()
 
 // TODO: replace '#' with real profile / messenger links once provided.
 const socials = [
