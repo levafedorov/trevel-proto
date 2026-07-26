@@ -44,5 +44,5 @@ export function useContacts() {
     },
   ]
 
-  return { phones }
+  return { phones, email: 'lyfbux@mail.ru' }
 }

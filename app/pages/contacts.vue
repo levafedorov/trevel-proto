@@ -73,10 +73,10 @@
             </div>
             <div class="text-stone-500 text-sm mb-2">{{ $t('contacts.email') }}</div>
             <a
-              href="mailto:hello@lovenroute.travel"
+              :href="`mailto:${email}`"
               class="text-stone-900 font-semibold text-sm hover:text-amber-600 transition-colors"
             >
-              hello@lovenroute.travel
+              {{ email }}
             </a>
           </div>
         </div>
@@ -91,5 +91,5 @@ useSeoMeta({
   description: 'Get in touch with LovEnRoute — signature tours across Turkey.',
 })
 
-const { phones } = useContacts()
+const { phones, email } = useContacts()
 </script>

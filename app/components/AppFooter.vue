@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-stone-900 text-stone-300">
+  <footer class="bg-stone-800 text-stone-300">
     <UContainer>
       <div class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <!-- Brand -->
@@ -21,7 +21,7 @@
               v-for="social in socials"
               :key="social.name"
               :href="social.href"
-              class="w-9 h-9 rounded-full bg-stone-800 hover:bg-amber-600 flex items-center justify-center transition-colors duration-200"
+              class="w-9 h-9 rounded-full bg-stone-700 hover:bg-amber-600 flex items-center justify-center transition-colors duration-200"
               :aria-label="social.name"
             >
               <UIcon :name="social.icon" class="w-4 h-4 text-stone-300" />
@@ -73,15 +73,15 @@
             </li>
             <li class="flex items-center gap-2 text-sm text-stone-400">
               <UIcon name="i-lucide-mail" class="w-4 h-4 text-amber-500 shrink-0" />
-              <a href="mailto:hello@lovenroute.travel" class="hover:text-amber-400 transition-colors">
-                hello@lovenroute.travel
+              <a :href="`mailto:${email}`" class="hover:text-amber-400 transition-colors">
+                {{ email }}
               </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="border-t border-stone-800 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="border-t border-stone-700 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-stone-500 text-sm">
           © {{ new Date().getFullYear() }} LovEnRoute. {{ $t('footer.rights') }}
         </p>
@@ -95,7 +95,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const { phones } = useContacts()
+const { phones, email } = useContacts()
 
 // TODO: replace '#' with real profile / messenger links once provided.
 const socials = [
