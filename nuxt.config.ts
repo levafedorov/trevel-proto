@@ -48,10 +48,11 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'ru',
     strategy: 'no_prefix',
-    // The audience is Russian-speaking, so Russian is the language everyone lands
-    // on; English stays available through the switcher in the navbar. Detection is
-    // off because it overrode defaultLocale for anyone with an English browser.
-    detectBrowserLanguage: false,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
     bundle: {
       optimizeTranslationDirective: false,
     },
