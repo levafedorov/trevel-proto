@@ -21,6 +21,14 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
+  ui: {
+    // The site is light-only: no `dark:` styles, no theme toggle. Without this,
+    // @nuxt/ui registers color-mode, which adds `.dark` to <html> whenever the
+    // visitor's OS prefers dark — flipping Nuxt UI components (the booking modal
+    // most visibly) while our own markup stays light.
+    colorMode: false,
+  },
+
   css: ['~/assets/css/main.css'],
 
   i18n: {
