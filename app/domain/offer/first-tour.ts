@@ -10,14 +10,18 @@ import type { DayNote, LocalizedText, Media, Offer } from './types'
 
 // Real photography (days 1–4). Vite resolves these imports to hashed URLs.
 import heroImg from '~/assets/images/first-tour/second-day.jpeg'
-import bayImg from '~/assets/images/first-tour/first-day.jpeg'
-import hotelImg from '~/assets/images/first-tour/first-day-1.jpeg'
+import hotelRoomImg from '~/assets/images/first-tour/hotel-room.jpeg'
+import hotelPoolImg from '~/assets/images/first-tour/hotel-pool.jpeg'
 import clockTowerImg from '~/assets/images/first-tour/second-day.jpeg'
 import kemeraltiImg from '~/assets/images/first-tour/second-day-1.jpeg'
 import yachtImg from '~/assets/images/first-tour/kushadasy.jpeg'
 import pirateCastleImg from '~/assets/images/first-tour/kusadasy-1.jpeg'
 import ephesusImg from '~/assets/images/first-tour/efes.jpeg'
 import sirinceImg from '~/assets/images/first-tour/efes-1.jpeg'
+
+// Gallery-only shots (not tied to a single day).
+import izmirStreetImg from '~/assets/images/first-tour/izmir-street.jpeg'
+import izmirBayGullImg from '~/assets/images/first-tour/izmir-bay-gull.jpeg'
 
 /** Compact bilingual literal. */
 const t = (ru: string, en: string): LocalizedText => ({ ru, en })
@@ -40,8 +44,8 @@ export const aegeanPearls: Offer = {
   title: t('Жемчужины Эгейского побережья', 'Pearls of the Aegean Coast'),
   eyebrow: t('Авторский тур · Измир, Турция', 'Signature tour · Izmir, Turkey'),
   subtitle: t(
-    'Измир · Кушадасы · Эфес · Чешме · Памуккале. Семь дней у лазурного моря — с русскоговорящим гидом.',
-    'Izmir · Kusadasi · Ephesus · Cesme · Pamukkale. Seven days by the turquoise sea — with a Russian-speaking guide.',
+    'Измир · Кушадасы · Эфес · Чешме · Алачаты · Памуккале. Семь дней у лазурного моря — с русскоговорящим гидом.',
+    'Izmir · Kusadasi · Ephesus · Cesme · Alacati · Pamukkale. Seven days by the turquoise sea — with a Russian-speaking guide.',
   ),
   shortDescription: t(
     'Семь дней у лазурного Эгейского моря: Измир, Кушадасы, Эфес, Памуккале — с русскоговорящим гидом.',
@@ -67,16 +71,15 @@ export const aegeanPearls: Offer = {
       'Seven days along the turquoise Aegean — from Izmir, where antiquity meets the modern city, to the snow-white travertines of Pamukkale. A boat trip around the bays of Kusadasi, ancient Ephesus and the House of the Virgin Mary, the narrow lanes of Alacati and Cesme, and a fruit-wine tasting in the Greek village of Sirince.',
     ),
     t(
-      'Проживание в отеле в самом сердце Измира со СПА, сауной и бассейном, комфортные трансферы, продуманные экскурсии с русскоговорящим гидом и время на отдых у моря. Семь дней, шесть ночей и небольшая группа — до 16 человек. Тур авторский — камерный, тёплый и без спешки.',
-      'You stay at a hotel in the very heart of Izmir with a spa, sauna and pool; comfortable transfers, thoughtfully planned excursions with a Russian-speaking guide, and time to unwind by the sea. Seven days, six nights and a small group of up to 16 people. This is a signature tour — intimate, warm and unhurried.',
+      'Проживание в 5* отеле при 2-х местном размещении в номере в самом сердце 💗 Измира со СПА, сауной и бассейном, комфортные трансферы, продуманные экскурсии с русскоговорящим гидом и время на отдых у моря. Семь дней, шесть ночей и небольшая группа — до 16 человек. Тур авторский — камерный, тёплый и без спешки.',
+      'You stay at a 5* hotel in a double room in the very heart of 💗 Izmir, with a spa, sauna and pool; comfortable transfers, thoughtfully planned excursions with a Russian-speaking guide, and time to unwind by the sea. Seven days, six nights and a small group of up to 16 people. This is a signature tour — intimate, warm and unhurried.',
     ),
   ],
 
   gallery: [
-    { src: ephesusImg, alt: t('Эфес', 'Ephesus') },
+    { src: izmirStreetImg, alt: t('Улочки Измира', 'The streets of Izmir') },
+    { src: izmirBayGullImg, alt: t('Измирский залив', 'The Bay of Izmir') },
     { src: yachtImg, alt: t('Кушадасы', 'Kusadasi') },
-    // TODO: real photo — no Pamukkale shot yet.
-    placeholder('pamukkale-terraces', t('Памуккале', 'Pamukkale')),
   ],
 
   itinerary: [
@@ -95,8 +98,8 @@ export const aegeanPearls: Offer = {
         ),
       ],
       pois: [
-        { label: t('Измирский залив', 'Bay of Izmir'), image: { src: bayImg, alt: t('Измирский залив', 'Bay of Izmir') } },
-        { label: t('отель · СПА', 'hotel · spa'), image: { src: hotelImg, alt: t('Отель со СПА', 'Hotel with spa') } },
+        { label: t('двухместный номер', 'double room'), image: { src: hotelRoomImg, alt: t('Двухместный номер в отеле', 'A double room at the hotel') } },
+        { label: t('бассейн · СПА', 'pool · spa'), image: { src: hotelPoolImg, alt: t('Бассейн отеля', 'The hotel pool') } },
       ],
       notes: [],
       meals: { dinner: true },
