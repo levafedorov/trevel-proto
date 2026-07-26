@@ -4,7 +4,7 @@
     <div
       class="absolute inset-0 bg-cover bg-center will-change-transform"
       :style="{
-        backgroundImage: `url('https://picsum.photos/seed/turkey-istanbul-hero/1920/1080')`,
+        backgroundImage: `url('${heroBg}')`,
         transform: `scale(1.12) translateY(${parallaxY}px)`,
       }"
     />
@@ -59,6 +59,9 @@
 </template>
 
 <script setup lang="ts">
+// Real photography instead of the picsum placeholder. Vite hashes the URL.
+import heroBg from '~/assets/images/hero-aegean-bay.jpeg'
+
 const parallaxY = ref(0)
 
 const handleScroll = () => {
