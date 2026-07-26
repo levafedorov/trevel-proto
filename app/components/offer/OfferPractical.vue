@@ -5,6 +5,10 @@
         {{ $t('offerPage.practical.title') }}
       </h2>
 
+      <div v-if="notes?.length" class="space-y-3 text-stone-600 text-lg leading-relaxed max-w-3xl mb-8 -mt-2">
+        <p v-for="(note, i) in notes" :key="i">{{ localize(note) }}</p>
+      </div>
+
       <div class="flex flex-wrap gap-3">
         <span
           v-for="(item, i) in items"
@@ -20,9 +24,9 @@
 </template>
 
 <script setup lang="ts">
-import type { PracticalItem } from '~/domain/offer/types'
+import type { LocalizedText, PracticalItem } from '~/domain/offer/types'
 
-defineProps<{ items: PracticalItem[] }>()
+defineProps<{ items: PracticalItem[], notes?: LocalizedText[] }>()
 
 const { localize } = useLocalizedText()
 </script>

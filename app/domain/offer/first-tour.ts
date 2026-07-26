@@ -6,7 +6,7 @@
  * a CMS fetch later (see offerRepository.ts).
  */
 import { Availability, DepartureStatus, InclusionKind, NoteTone, PaymentKind } from './types'
-import type { DayNote, LocalizedText, Media, Offer } from './types'
+import type { DayNote, LocalizedText, Offer } from './types'
 
 // Real photography (days 1–4). Vite resolves these imports to hashed URLs.
 import heroImg from '~/assets/images/first-tour/second-day.jpeg'
@@ -15,9 +15,15 @@ import hotelPoolImg from '~/assets/images/first-tour/hotel-pool.jpeg'
 import clockTowerImg from '~/assets/images/first-tour/second-day.jpeg'
 import kemeraltiImg from '~/assets/images/first-tour/second-day-1.jpeg'
 import yachtImg from '~/assets/images/first-tour/kushadasy.jpeg'
-import pirateCastleImg from '~/assets/images/first-tour/kusadasy-1.jpeg'
-import ephesusImg from '~/assets/images/first-tour/efes.jpeg'
+import guletImg from '~/assets/images/first-tour/kusadasy-1.jpeg'
+import kusadasyLighthouseImg from '~/assets/images/first-tour/kusadasy-lighthouse.jpeg'
+import celsusImg from '~/assets/images/first-tour/efes-celsus.jpeg'
 import sirinceImg from '~/assets/images/first-tour/efes-1.jpeg'
+import alacatiImg from '~/assets/images/first-tour/alacati-street.jpeg'
+import seasideRestaurantImg from '~/assets/images/first-tour/seaside-restaurant.jpeg'
+import pamukkaleImg from '~/assets/images/first-tour/pamukkale-terraces.jpeg'
+import hierapolisImg from '~/assets/images/first-tour/hierapolis-theatre.jpeg'
+import terraceImg from '~/assets/images/first-tour/restaurant-terrace.jpeg'
 
 // Gallery-only shots (not tied to a single day).
 import izmirStreetImg from '~/assets/images/first-tour/izmir-street.jpeg'
@@ -29,15 +35,6 @@ const t = (ru: string, en: string): LocalizedText => ({ ru, en })
 /** Day-note builders: `good` for what's included, `warn` for caveats / extra cost. */
 const good = (ru: string, en: string): DayNote => ({ tone: NoteTone.POSITIVE, text: t(ru, en) })
 const warn = (ru: string, en: string): DayNote => ({ tone: NoteTone.CAUTION, text: t(ru, en) })
-
-/**
- * Placeholder for scenes we have no real photo of yet (days 5–7, Pamukkale).
- * picsum is already an allowed image domain. TODO: real photo.
- */
-const placeholder = (seed: string, alt: LocalizedText): Media => ({
-  src: `https://picsum.photos/seed/${seed}/800/600`,
-  alt,
-})
 
 export const aegeanPearls: Offer = {
   slug: 'aegean-pearls',
@@ -116,10 +113,7 @@ export const aegeanPearls: Offer = {
             'City sightseeing tour “Izmir: between antiquity and the modern day”. The Historical Elevator (Turkish and Italian architecture, traditional Turkish coffee with a view over the city), the Agora — ruins of ancient Smyrna dating back to the days of Alexander the Great, the Kemeralti quarter with its Ottoman architecture, caravanserai and covered shopping street, Clock Tower Square — the symbol of Izmir, and the Kibris Sehitleri shopping street with a Turkish lunch of your choice. A ferry ride and Kulturpark.',
           ),
         },
-        {
-          time: t('18:00', '18:00'),
-          text: t('Свободное время: турецкий пенный хамам или европейский шоппинг в моллах города.', 'Free time: a Turkish foam hammam or European-style shopping in the city malls.'),
-        },
+        { time: t('18:30', '18:30'), text: t('Возврат в отель.', 'Return to the hotel.') },
       ],
       body: [],
       pois: [
@@ -148,8 +142,8 @@ export const aegeanPearls: Offer = {
       ],
       body: [],
       pois: [
-        { label: t('яхта · Кушадасы', 'yacht · Kusadasi'), image: { src: yachtImg, alt: t('Яхта у Кушадасы', 'Yacht near Kusadasi') } },
-        { label: t('Пиратский замок', 'Pirate Castle'), image: { src: pirateCastleImg, alt: t('Пиратский замок Кушадасы', 'Kusadasi Pirate Castle') } },
+        { label: t('яхта · Кушадасы', 'yacht · Kusadasi'), image: { src: guletImg, alt: t('Гулет на якоре в бухте у Кушадасы', 'A gulet anchored in a bay near Kusadasi') } },
+        { label: t('маяк · Кушадасы', 'lighthouse · Kusadasi'), image: { src: kusadasyLighthouseImg, alt: t('Маяк в Кушадасы', 'A lighthouse in Kusadasi') } },
       ],
       notes: [good('Обед и безалкогольные напитки включены · с собой: пляжные вещи, деньги на сувениры, купальные принадлежности', 'Lunch and soft drinks included · bring: beachwear, money for souvenirs, swimwear')],
       meals: { breakfast: true, lunch: true },
@@ -183,8 +177,8 @@ export const aegeanPearls: Offer = {
       ],
       body: [],
       pois: [
-        { label: t('Эфес · Библиотека Цельса', 'Ephesus · Library of Celsus'), image: { src: ephesusImg, alt: t('Библиотека Цельса', 'Library of Celsus') } },
-        { label: t('Шириндже', 'Sirince'), image: { src: sirinceImg, alt: t('Деревня Шириндже', 'Sirince village') } },
+        { label: t('Эфес · Библиотека Цельса', 'Ephesus · Library of Celsus'), image: { src: celsusImg, alt: t('Фасад Библиотеки Цельса в Эфесе', 'The facade of the Library of Celsus at Ephesus') } },
+        { label: t('Шириндже', 'Sirince'), image: { src: sirinceImg, alt: t('Кафе в деревне Шириндже', 'A cafe in the village of Sirince') } },
       ],
       notes: [good('Обед входит в стоимость · напитки за отдельную плату', 'Lunch included · drinks payable separately')],
       meals: { breakfast: true, lunch: true },
@@ -192,7 +186,9 @@ export const aegeanPearls: Offer = {
     {
       day: 5,
       title: t('Белая сказка Алачаты, история Чешме и морской бриз Илиджа', 'The white fairy tale of Alacati, the story of Cesme and the sea breeze of Ilica'),
-      timeline: [],
+      timeline: [
+        { time: t('08:00', '08:00'), text: t('Завтрак перед экскурсией.', 'Breakfast before the excursion.') },
+      ],
       body: [
         t(
           'Экскурсия в Чешме — путешествие туда, где Эгейское море особенно прозрачно, а воздух наполнен солёной свежестью и солнцем. Город встречает мягким светом белых домов, узкими улочками и неспешным ритмом курортной жизни. Старинная крепость возвышается над городом, храня истории морских сражений; с её стен открывается вид на яхты в порту и бескрайнюю синь побережья. Рядом — Алачаты с каменными домами, увитыми бугенвиллией, где пахнет кофе, специями и морским ветром.',
@@ -204,9 +200,8 @@ export const aegeanPearls: Offer = {
         ),
       ],
       pois: [
-        // TODO: real photo.
-        { label: t('Алачаты', 'Alacati'), image: placeholder('alacati-stone-houses', t('Алачаты', 'Alacati')) },
-        { label: t('пляж Илиджа', 'Ilica Beach'), image: placeholder('ilica-beach', t('Пляж Илиджа', 'Ilica Beach')) },
+        { label: t('Алачаты', 'Alacati'), image: { src: alacatiImg, alt: t('Улочка Алачаты с белёными домами', 'An Alacati lane with whitewashed houses') } },
+        { label: t('Чешме · у моря', 'Cesme · by the sea'), image: { src: seasideRestaurantImg, alt: t('Терраса ресторана у самой воды', 'A restaurant terrace right at the water') } },
       ],
       notes: [warn('Обед в свободное время — не входит в стоимость · с собой: купальные принадлежности', 'Lunch during free time is not included · bring: swimwear')],
       meals: { breakfast: true },
@@ -215,7 +210,7 @@ export const aegeanPearls: Offer = {
       day: 6,
       title: t('Памуккале — одно из семи чудес света', 'Pamukkale — one of the Seven Wonders'),
       timeline: [
-        { time: t('07:00', '07:00'), text: t('Выезд на экскурсию «Памуккале — одно из семи чудес света». День исцеления души и тела в атмосфере времён Клеопатры.', 'Departure for the “Pamukkale — one of the Seven Wonders” excursion. A day of healing for body and soul, in an atmosphere from the time of Cleopatra.') },
+        { time: t('07:00', '07:00'), text: t('Берём с собой ланч-бокс с завтраком и выезжаем из отеля. День исцеления души и тела в атмосфере времён Клеопатры.', 'We take a packed breakfast with us and leave the hotel. A day of healing for body and soul, in an atmosphere from the time of Cleopatra.') },
         {
           time: t('10:30', '10:30'),
           text: t(
@@ -234,9 +229,8 @@ export const aegeanPearls: Offer = {
       ],
       body: [],
       pois: [
-        // TODO: real photo.
-        { label: t('Памуккале · травертины', 'Pamukkale · travertines'), image: placeholder('pamukkale-white', t('Травертины Памуккале', 'Pamukkale travertines')) },
-        { label: t('Бассейн Клеопатры', 'Cleopatra’s Pool'), image: placeholder('cleopatra-pool', t('Бассейн Клеопатры', 'Cleopatra’s Pool')) },
+        { label: t('Памуккале · травертины', 'Pamukkale · travertines'), image: { src: pamukkaleImg, alt: t('Белые травертины Памуккале с минеральной купелью', 'The white travertines of Pamukkale with a mineral pool') } },
+        { label: t('Иераполис · античный театр', 'Hierapolis · the ancient theatre'), image: { src: hierapolisImg, alt: t('Античный театр Иераполиса', 'The ancient theatre of Hierapolis') } },
       ],
       notes: [good('Обед входит в стоимость · напитки за отдельную плату · с собой: купальные принадлежности', 'Lunch included · drinks payable separately · bring: swimwear')],
       meals: { breakfast: true, lunch: true },
@@ -247,8 +241,7 @@ export const aegeanPearls: Offer = {
       timeline: [],
       body: [t('Заключительный завтрак в отеле, свободное время и трансфер в аэропорт.', 'A final breakfast at the hotel, free time and a transfer to the airport.')],
       pois: [
-        // TODO: real photo.
-        { label: t('свободное утро', 'a free morning'), image: placeholder('izmir-morning', t('Свободное утро в Измире', 'A free morning in Izmir')) },
+        { label: t('свободное утро', 'a free morning'), image: { src: terraceImg, alt: t('Терраса под бугенвиллеей', 'A terrace under bougainvillea') } },
       ],
       notes: [],
       meals: { breakfast: true },
@@ -262,6 +255,7 @@ export const aegeanPearls: Offer = {
     { kind: InclusionKind.INCLUDED, icon: 'i-lucide-users', label: t('Сопровождение во время экскурсий', 'Escort throughout the excursions') },
     { kind: InclusionKind.INCLUDED, icon: 'i-lucide-ticket', label: t('Экскурсии со всеми входными билетами: музеи, археологические зоны и другие объекты', 'Excursions with all entry tickets: museums, archaeological sites and other attractions') },
     { kind: InclusionKind.INCLUDED, icon: 'i-lucide-shield-check', label: t('Медицинское страхование во время экскурсий', 'Medical insurance during the excursions') },
+    { kind: InclusionKind.INCLUDED, icon: 'i-lucide-headset', label: t('Поддержка куратора 24/7', 'A coordinator on call 24/7') },
     { kind: InclusionKind.EXCLUDED, label: t('5 ужинов и 3 обеда', '5 dinners and 3 lunches') },
     { kind: InclusionKind.EXCLUDED, label: t('Медицинское страхование на время путешествия (вне экскурсий)', 'Medical insurance for the trip (outside excursions)') },
     { kind: InclusionKind.EXCLUDED, label: t('Авиабилеты', 'Flights') },
@@ -269,11 +263,22 @@ export const aegeanPearls: Offer = {
     { kind: InclusionKind.EXCLUDED, label: t('Прочие личные расходы', 'Other personal expenses') },
   ],
 
+  practicalNotes: [
+    t(
+      'В свободное время любого дня мы можем Вам предложить: турецкий пенный хамам, европейский шоппинг в моллах города или прогулку по центру города.',
+      'In your free time on any day we can arrange a Turkish foam hammam, European-style shopping in the city malls, or a stroll through the city centre.',
+    ),
+    t(
+      'Для поездки в Турцию заграничный паспорт должен действовать не менее 120 дней (4 месяцев) с даты въезда в страну.',
+      'To travel to Turkey, your passport must be valid for at least 120 days (4 months) from the date of entry.',
+    ),
+  ],
+
   practicalInfo: [
     { icon: '🩱', label: t('Купальные принадлежности (дни 3, 5, 6)', 'Swimwear (days 3, 5, 6)') },
     { icon: '💶', label: t('Деньги на обеды и сувениры', 'Money for lunches and souvenirs') },
-    { icon: '☀️', label: t('Лёгкая одежда и головной убор', 'Light clothing and a hat') },
-    { icon: '👟', label: t('Удобная обувь для прогулок', 'Comfortable walking shoes') },
+    { icon: '☀️', label: t('Лёгкая одежда, удобная обувь и головной убор', 'Light clothing, comfortable shoes and a hat') },
+    { icon: '⏱️', label: t('Время в программе экскурсии — примерное', 'Times in the itinerary are approximate') },
   ],
 
   departures: [

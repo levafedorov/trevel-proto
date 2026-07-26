@@ -190,6 +190,8 @@ export interface Offer {
   itinerary: ItineraryDay[]
   inclusions: InclusionItem[]
   practicalInfo: PracticalItem[]
+  /** Lead paragraphs above the practical pills, for anything too long to fit one. */
+  practicalNotes?: LocalizedText[]
   departures: Departure[]
   paymentOptions: PaymentOption[]
   meta: SeoMeta

@@ -21,7 +21,7 @@
         <OfferInclusions :items="offer.inclusions" />
       </section>
       <section id="practical" class="scroll-mt-32">
-        <OfferPractical :items="offer.practicalInfo" />
+        <OfferPractical :items="offer.practicalInfo" :notes="offer.practicalNotes" />
       </section>
       <section id="departures" class="scroll-mt-32">
         <OfferDepartures :offer="offer" />
