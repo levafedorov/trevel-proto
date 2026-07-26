@@ -197,7 +197,7 @@ export const aegeanPearls: Offer = {
           ),
         },
         {
-          time: t('свободное время', 'free time'),
+          time: t('отдых', 'rest'),
           text: t(
             'В Илидже нас ждёт чистая песчаная набережная и долгое свободное время для купания и прогулок. Пляж Илыджа — один из лучших на Эгейском побережье: кристально чистая вода, мелкий золотистый песок и тёплые термальные источники, впадающие прямо в море. Возвращение в отель в 19:15.',
             'In Ilica a clean, sandy promenade and plenty of free time for swimming and walks await. Ilica Beach is one of the finest on the Aegean coast: crystal-clear water, fine golden sand and warm thermal springs that flow straight into the sea. Return to the hotel at 19:15.',
