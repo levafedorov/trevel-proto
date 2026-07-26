@@ -9,7 +9,8 @@ import { Availability, DepartureStatus, InclusionKind, NoteTone, PaymentKind } f
 import type { DayNote, LocalizedText, Offer } from './types'
 
 // Real photography (days 1–4). Vite resolves these imports to hashed URLs.
-import heroImg from '~/assets/images/first-tour/second-day.jpeg'
+// Card thumbnail and og:image for this offer.
+import coverImg from '~/assets/images/first-tour/izmir-bay-panorama.jpeg'
 import hotelRoomImg from '~/assets/images/first-tour/hotel-room.jpeg'
 import hotelPoolImg from '~/assets/images/first-tour/hotel-pool.jpeg'
 import clockTowerImg from '~/assets/images/first-tour/second-day.jpeg'
@@ -58,8 +59,8 @@ export const aegeanPearls: Offer = {
   guideLanguage: 'RU',
 
   hero: {
-    src: heroImg,
-    alt: t('Измирский залив на закате', 'The Bay of Izmir at sunset'),
+    src: coverImg,
+    alt: t('Измирский залив и панорама города', 'The Bay of Izmir and the city skyline'),
   },
 
   description: [
@@ -188,17 +189,22 @@ export const aegeanPearls: Offer = {
       title: t('Белая сказка Алачаты, история Чешме и морской бриз Илиджа', 'The white fairy tale of Alacati, the story of Cesme and the sea breeze of Ilica'),
       timeline: [
         { time: t('08:00', '08:00'), text: t('Завтрак перед экскурсией.', 'Breakfast before the excursion.') },
+        {
+          time: t('экскурсия', 'excursion'),
+          text: t(
+            'Экскурсия в Чешме — путешествие туда, где Эгейское море особенно прозрачно, а воздух наполнен солёной свежестью и солнцем. Город встречает мягким светом белых домов, узкими улочками и неспешным ритмом курортной жизни. Старинная крепость возвышается над городом, храня истории морских сражений; с её стен открывается вид на яхты в порту и бескрайнюю синь побережья. Рядом — Алачаты с каменными домами, увитыми бугенвиллией, где пахнет кофе, специями и морским ветром.',
+            'An excursion to Cesme — a journey to where the Aegean is especially clear and the air is full of salty freshness and sun. The town greets you with the soft light of white houses, narrow lanes and the unhurried rhythm of resort life. An old fortress rises above the town, keeping the stories of sea battles; from its walls open views of yachts in the harbour and the endless blue of the coast. Nearby lies Alacati, with its stone houses draped in bougainvillea, where the air smells of coffee, spices and the sea breeze.',
+          ),
+        },
+        {
+          time: t('свободное время', 'free time'),
+          text: t(
+            'В Илидже нас ждёт чистая песчаная набережная и долгое свободное время для купания и прогулок. Пляж Илыджа — один из лучших на Эгейском побережье: кристально чистая вода, мелкий золотистый песок и тёплые термальные источники, впадающие прямо в море. Возвращение в отель в 19:15.',
+            'In Ilica a clean, sandy promenade and plenty of free time for swimming and walks await. Ilica Beach is one of the finest on the Aegean coast: crystal-clear water, fine golden sand and warm thermal springs that flow straight into the sea. Return to the hotel at 19:15.',
+          ),
+        },
       ],
-      body: [
-        t(
-          'Экскурсия в Чешме — путешествие туда, где Эгейское море особенно прозрачно, а воздух наполнен солёной свежестью и солнцем. Город встречает мягким светом белых домов, узкими улочками и неспешным ритмом курортной жизни. Старинная крепость возвышается над городом, храня истории морских сражений; с её стен открывается вид на яхты в порту и бескрайнюю синь побережья. Рядом — Алачаты с каменными домами, увитыми бугенвиллией, где пахнет кофе, специями и морским ветром.',
-          'An excursion to Cesme — a journey to where the Aegean is especially clear and the air is full of salty freshness and sun. The town greets you with the soft light of white houses, narrow lanes and the unhurried rhythm of resort life. An old fortress rises above the town, keeping the stories of sea battles; from its walls open views of yachts in the harbour and the endless blue of the coast. Nearby lies Alacati, with its stone houses draped in bougainvillea, where the air smells of coffee, spices and the sea breeze.',
-        ),
-        t(
-          'В Илидже нас ждёт чистая песчаная набережная и долгое свободное время для купания и прогулок. Пляж Илыджа — один из лучших на Эгейском побережье: кристально чистая вода, мелкий золотистый песок и тёплые термальные источники, впадающие прямо в море. Возвращение в отель в 19:15.',
-          'In Ilica a clean, sandy promenade and plenty of free time for swimming and walks await. Ilica Beach is one of the finest on the Aegean coast: crystal-clear water, fine golden sand and warm thermal springs that flow straight into the sea. Return to the hotel at 19:15.',
-        ),
-      ],
+      body: [],
       pois: [
         { label: t('Алачаты', 'Alacati'), image: { src: alacatiImg, alt: t('Улочка Алачаты с белёными домами', 'An Alacati lane with whitewashed houses') } },
         { label: t('Чешме · у моря', 'Cesme · by the sea'), image: { src: seasideRestaurantImg, alt: t('Терраса ресторана у самой воды', 'A restaurant terrace right at the water') } },
@@ -265,12 +271,12 @@ export const aegeanPearls: Offer = {
 
   practicalNotes: [
     t(
-      'В свободное время любого дня мы можем Вам предложить: турецкий пенный хамам, европейский шоппинг в моллах города или прогулку по центру города.',
-      'In your free time on any day we can arrange a Turkish foam hammam, European-style shopping in the city malls, or a stroll through the city centre.',
+      'Нами будут предложены дополнительные экскурсии за доплату.',
+      'We will offer optional extra excursions at additional cost.',
     ),
     t(
-      'Для поездки в Турцию заграничный паспорт должен действовать не менее 120 дней (4 месяцев) с даты въезда в страну.',
-      'To travel to Turkey, your passport must be valid for at least 120 days (4 months) from the date of entry.',
+      'Для поездки обязательно: загранпаспорт сроком не менее 120 дней с даты въезда в Турцию.',
+      'Required for the trip: a passport valid for at least 120 days from the date of entry into Turkey.',
     ),
   ],
 
@@ -309,6 +315,6 @@ export const aegeanPearls: Offer = {
       'Авторский тур по Эгейскому побережью Турции: Измир, Кушадасы, Эфес, Памуккале. 7 дней, русскоговорящий гид.',
       'A signature tour of Turkey’s Aegean coast: Izmir, Kusadasi, Ephesus and Pamukkale. 7 days with a Russian-speaking guide.',
     ),
-    ogImage: heroImg,
+    ogImage: coverImg,
   },
 }
