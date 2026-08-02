@@ -4,7 +4,7 @@
     <section class="relative py-28 overflow-hidden bg-amber-950">
       <div
         class="absolute inset-0 bg-cover bg-center opacity-40"
-        style="background-image: url('https://picsum.photos/seed/contacts-hero/1920/600');"
+        :style="{ backgroundImage: `url(${contactsHeroBg})` }"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-amber-950/75 to-amber-900/35" />
       <UContainer class="relative z-10">
@@ -86,6 +86,8 @@
 </template>
 
 <script setup lang="ts">
+import contactsHeroBg from '~/assets/images/first-tour/kusadasy-lighthouse.jpeg'
+
 useSeoMeta({
   title: 'Contacts – LovEnRoute',
   description: 'Get in touch with LovEnRoute — signature tours across Turkey.',

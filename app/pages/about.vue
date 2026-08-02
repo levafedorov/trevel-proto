@@ -4,7 +4,7 @@
     <section class="relative py-28 overflow-hidden bg-amber-950">
       <div
         class="absolute inset-0 bg-cover bg-center opacity-40"
-        style="background-image: url('https://picsum.photos/seed/about-hero/1920/600');"
+        :style="{ backgroundImage: `url(${aboutHeroBg})` }"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-amber-950/75 to-amber-900/35" />
       <UContainer class="relative z-10">
@@ -67,7 +67,7 @@
     <section class="py-24 bg-stone-900 text-white overflow-hidden relative">
       <div
         class="absolute inset-0 bg-cover bg-center opacity-15"
-        style="background-image: url('https://picsum.photos/seed/turkey-philosophy/1920/700');"
+        :style="{ backgroundImage: `url(${philosophyBg})` }"
       />
       <UContainer class="relative z-10 text-center max-w-3xl">
         <p class="text-amber-400 font-medium tracking-widest text-sm uppercase mb-4">
@@ -111,6 +111,8 @@
 
 <script setup lang="ts">
 import managerPhoto from '~/assets/images/director-photo.jpeg'
+import aboutHeroBg from '~/assets/images/first-tour/alacati-street.jpeg'
+import philosophyBg from '~/assets/images/first-tour/efes-celsus.jpeg'
 
 const { t } = useI18n()
 

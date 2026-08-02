@@ -8,7 +8,7 @@
     <section class="py-24 bg-amber-600 relative overflow-hidden">
       <div class="absolute inset-0 opacity-10">
         <img
-          src="https://picsum.photos/seed/cta-banner/1920/400"
+          :src="ctaBannerImg"
           alt=""
           class="w-full h-full object-cover"
         />
@@ -36,9 +36,10 @@
 </template>
 
 <script setup lang="ts">
+import ctaBannerImg from '~/assets/images/first-tour/izmir-bay-panorama.jpeg'
+
 useSeoMeta({
   title: 'LovEnRoute – Turkey Travel Specialists',
   description: 'Handcrafted Turkey journeys — Istanbul, Cappadocia, the Aegean coast, and beyond. LovEnRoute takes you to the real Turkey.',
-  ogImage: 'https://picsum.photos/seed/wanderlux-og/1200/630',
 })
 </script>

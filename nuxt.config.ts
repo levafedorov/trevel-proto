@@ -1,6 +1,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
 
+  // Single source of truth for the public origin. Canonical links, og:url,
+  // the OG image and sitemap.xml all derive from it, so a domain change is a
+  // one-line edit (or a NUXT_PUBLIC_SITE_URL override at build time).
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://lovenroute.com',
+    },
+  },
+
   future: {
     compatibilityVersion: 4,
   },
@@ -63,8 +72,18 @@ export default defineNuxtConfig({
     format: ['webp', 'jpg'],
   },
 
+  // Deployed as a fully prerendered site to Yandex Object Storage: no server
+  // runtime, so every route must exist as an .html file in the bucket.
+  // `crawlLinks` walks the internal <NuxtLink>s from `/` and picks up the
+  // offer detail pages; `/dashboard` is listed because nothing links to it
+  // from a crawled page yet.
   nitro: {
-    preset: 'vercel',
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/dashboard'],
+      failOnError: true,
+    },
   },
 
   app: {
@@ -76,13 +95,15 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'LovEnRoute — Turkey travel specialists. Handcrafted journeys to Istanbul, Cappadocia, the Aegean coast, and beyond.' },
       ],
+      // No Google Fonts <link> here on purpose: @nuxt/fonts (bundled with
+      // @nuxt/ui) reads --font-sans / --font-serif from main.css, downloads
+      // Inter and Playfair Display at build time — Cyrillic subsets included —
+      // and serves them from /_fonts. Re-adding the CDN link would fetch the
+      // same faces twice over a render-blocking request to a host that is slow
+      // and unreliable from Russia.
       link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&subset=latin,cyrillic&display=swap',
-        },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
     },
   },
