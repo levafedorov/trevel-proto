@@ -38,8 +38,11 @@
 <script setup lang="ts">
 import ctaBannerImg from '~/assets/images/first-tour/izmir-bay-panorama.jpeg'
 
+const { t } = useI18n()
+
+// Function form so the tags re-render when the locale changes.
 useSeoMeta({
-  title: 'LovEnRoute – Turkey Travel Specialists',
-  description: 'Handcrafted Turkey journeys — Istanbul, Cappadocia, the Aegean coast, and beyond. LovEnRoute takes you to the real Turkey.',
+  title: () => t('seo.home.title'),
+  description: () => t('seo.home.description'),
 })
 </script>

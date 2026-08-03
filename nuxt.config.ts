@@ -89,11 +89,14 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'LovEnRoute – Turkey Travel Specialists',
+      // Fallback for routes that set no meta of their own (the 404 page above
+      // all). Russian, because that is the default locale — pages that do set
+      // meta take theirs from i18n under `seo.*` and override this.
+      title: 'LovEnRoute — авторские туры по Турции',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'LovEnRoute — Turkey travel specialists. Handcrafted journeys to Istanbul, Cappadocia, the Aegean coast, and beyond.' },
+        { name: 'description', content: 'Авторские туры по побережьям Турции от человека, который живёт этой страной.' },
       ],
       // No Google Fonts <link> here on purpose: @nuxt/fonts (bundled with
       // @nuxt/ui) reads --font-sans / --font-serif from main.css, downloads

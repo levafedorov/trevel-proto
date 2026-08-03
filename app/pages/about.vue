@@ -116,9 +116,10 @@ import philosophyBg from '~/assets/images/first-tour/efes-celsus.jpeg'
 
 const { t } = useI18n()
 
+// Function form so the tags re-render when the locale changes.
 useSeoMeta({
-  title: 'About Us – LovEnRoute',
-  description: 'Learn about LovEnRoute — signature tours across Turkey, from someone who truly lives this country.',
+  title: () => t('seo.about.title'),
+  description: () => t('seo.about.description'),
 })
 
 // Emoji are language-neutral and live here; only the label text is translated.

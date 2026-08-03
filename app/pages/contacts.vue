@@ -88,9 +88,12 @@
 <script setup lang="ts">
 import contactsHeroBg from '~/assets/images/first-tour/kusadasy-lighthouse.jpeg'
 
+const { t } = useI18n()
+
+// Function form so the tags re-render when the locale changes.
 useSeoMeta({
-  title: 'Contacts – LovEnRoute',
-  description: 'Get in touch with LovEnRoute — signature tours across Turkey.',
+  title: () => t('seo.contacts.title'),
+  description: () => t('seo.contacts.description'),
 })
 
 const { phones, email } = useContacts()

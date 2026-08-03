@@ -1,4 +1,22 @@
 {
+  "seo": {
+    "home": {
+      "title": "LovEnRoute — Author-Led Tours of Turkey",
+      "description": "Author-led tours along Turkey's coasts, guided by someone who lives there. Distinctive routes, hidden places and food worth travelling for."
+    },
+    "about": {
+      "title": "About Us — LovEnRoute",
+      "description": "The real Turkey, away from the tourist trail: its people, landscapes, history and genuine hospitality. About the guide behind LovEnRoute."
+    },
+    "contacts": {
+      "title": "Contacts — LovEnRoute",
+      "description": "Questions about tours, dates or trip details? Reach us on WhatsApp, Telegram or by email — whichever suits you."
+    },
+    "dashboard": {
+      "title": "All Turkey Tours — LovEnRoute",
+      "description": "The full collection of our author-led journeys across Turkey: routes, duration and pricing."
+    }
+  },
   "nav": {
     "home": "Home",
     "destinations": "Tours",

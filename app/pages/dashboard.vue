@@ -73,9 +73,10 @@ import type { OfferSummary } from '~/domain/offer/types'
 const { t } = useI18n()
 const { offers } = useOffers()
 
+// Function form so the tags re-render when the locale changes.
 useSeoMeta({
-  title: 'All Turkey Tours – LovEnRoute',
-  description: 'Browse our full collection of handcrafted Turkey travel experiences — Istanbul, Cappadocia, Antalya, and more.',
+  title: () => t('seo.dashboard.title'),
+  description: () => t('seo.dashboard.description'),
 })
 
 type FilterValue = 'all' | 'active' | 'inactive'
