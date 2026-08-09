@@ -4,13 +4,8 @@
       <div class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <!-- Brand -->
         <div class="lg:col-span-2">
-          <div class="flex items-center gap-2 mb-4">
-            <span class="text-amber-500">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12 12-5.373 12-12S20.627 2 14 2z" fill="currentColor" fill-opacity="0.15"/>
-                <path d="M14 6c-1.5 3-4 5-8 6 0 4 2 7.5 8 10 6-2.5 8-6 8-10-4-1-6.5-3-8-6z" fill="currentColor"/>
-              </svg>
-            </span>
+          <div class="flex items-center gap-2.5 mb-4">
+            <span class="logo-mark text-amber-500" aria-hidden="true" />
             <span class="font-serif text-xl font-bold text-white">LovEnRoute</span>
           </div>
           <p class="text-stone-400 text-sm leading-relaxed max-w-xs">

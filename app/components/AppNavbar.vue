@@ -18,15 +18,14 @@
   >
     <UContainer>
       <nav class="flex items-center justify-between h-16 lg:h-20">
-        <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center gap-2 shrink-0">
-          <span class="text-amber-600">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12 12-5.373 12-12S20.627 2 14 2z" fill="currentColor" fill-opacity="0.15"/>
-              <path d="M14 6c-1.5 3-4 5-8 6 0 4 2 7.5 8 10 6-2.5 8-6 8-10-4-1-6.5-3-8-6z" fill="currentColor"/>
-            </svg>
-          </span>
-          <span class="font-serif text-xl font-bold text-stone-900">
+        <!-- Logo. The mark is masked rather than inlined or served as <img>:
+             the source SVG carries no fill, so masking lets it take the brand
+             amber from `currentColor` while the 2.3KB path stays a single
+             cacheable file instead of being repeated in every page's HTML.
+             The wordmark is desktop-only; on mobile the mark stands alone. -->
+        <NuxtLink to="/" class="flex items-center gap-2.5 shrink-0" aria-label="LovEnRoute">
+          <span class="logo-mark text-amber-600" aria-hidden="true" />
+          <span class="hidden sm:block font-serif text-xl font-bold text-stone-900">
             LovEnRoute
           </span>
         </NuxtLink>

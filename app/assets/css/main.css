@@ -50,6 +50,21 @@ html {
   font-family: var(--font-serif);
 }
 
+/* Brand mark. Masked rather than inlined or served through <img>: the source
+   SVG carries no fill, so masking lets it take its colour from `currentColor`
+   — amber in the navbar, a lighter amber on the footer's dark ground — while
+   the path itself stays one cacheable file instead of being repeated in the
+   HTML of every page. Global, because both the navbar and the footer use it.
+   35:32 is the logo's own 128:116.79 ratio, kept exact so it is not squashed. */
+.logo-mark {
+  display: block;
+  width: 35px;
+  height: 32px;
+  background-color: currentColor;
+  -webkit-mask: url('/images/logo.svg') no-repeat center / contain;
+  mask: url('/images/logo.svg') no-repeat center / contain;
+}
+
 /* Fade-up animation */
 @keyframes fadeUp {
   from {

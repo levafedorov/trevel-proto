@@ -122,6 +122,8 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Авторские туры по побережьям Турции от человека, который живёт этой страной.' },
+        // Tints the browser chrome on mobile to the brand amber.
+        { name: 'theme-color', content: '#d97706' },
       ],
       // No Google Fonts <link> here on purpose: @nuxt/fonts (bundled with
       // @nuxt/ui) reads --font-sans / --font-serif from main.css, downloads
