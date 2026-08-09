@@ -34,6 +34,13 @@
         </button>
 
         <figure class="max-w-4xl max-h-[85vh] flex flex-col items-center" @click.stop>
+          <!-- Deliberately a plain <img>, not <NuxtImg>. This dialog sits behind
+               `v-if="open"`, so it never renders while Nitro prerenders the
+               page — and the ipxStatic provider only writes variants it saw
+               rendered. A <NuxtImg> here would point at an /_ipx/ URL that was
+               never generated and 404 in production. The original file in
+               `public/` is always served, and full size is what a lightbox
+               wants anyway. -->
           <img
             :src="current.src"
             :alt="localize(current.alt)"

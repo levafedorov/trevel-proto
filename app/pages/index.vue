@@ -7,9 +7,13 @@
     <!-- CTA Banner -->
     <section class="py-24 bg-amber-600 relative overflow-hidden">
       <div class="absolute inset-0 opacity-10">
-        <img
-          :src="ctaBannerImg"
+        <NuxtImg
+          src="/images/first-tour/izmir-bay-panorama.jpeg"
           alt=""
+          format="webp"
+          sizes="xs:100vw sm:100vw md:100vw lg:100vw"
+          densities="x1"
+          loading="lazy"
           class="w-full h-full object-cover"
         />
       </div>
@@ -36,8 +40,6 @@
 </template>
 
 <script setup lang="ts">
-import ctaBannerImg from '~/assets/images/first-tour/izmir-bay-panorama.jpeg'
-
 const { t } = useI18n()
 
 // Function form so the tags re-render when the locale changes.

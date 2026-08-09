@@ -1,13 +1,25 @@
 <template>
   <section class="hero-parallax-container relative h-screen min-h-[600px] max-h-[960px] flex items-center justify-center overflow-hidden">
-    <!-- Parallax background -->
-    <div
-      class="absolute inset-0 bg-cover bg-center will-change-transform"
-      :style="{
-        backgroundImage: `url('${heroBg}')`,
-        transform: `scale(1.12) translateY(${parallaxY}px)`,
-      }"
-    />
+    <!-- Parallax background. A real <img> rather than a CSS background so
+         @nuxt/image can resize it and so it can be preloaded as the LCP.
+
+         Every breakpoint is spelled out because @nuxt/image emits a srcset
+         candidate per *listed* screen — a lone `xs:100vw` yields just a 320px
+         image (plus its 2x), which is badly soft on a desktop. It stops at
+         xxl/1536 because the source file is 1600px wide, and `densities="x1"`
+         keeps it from asking for a 3072px variant that cannot exist. -->
+    <div ref="parallax" class="parallax absolute inset-0">
+      <NuxtImg
+        src="/images/hero-aegean-bay.jpeg"
+        alt=""
+        format="webp"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+        densities="x1"
+        preload
+        fetchpriority="high"
+        class="w-full h-full object-cover"
+      />
+    </div>
 
     <!-- Warm amber wash — "yellow glasses" tint instead of a dark mask -->
     <div class="absolute inset-0 bg-gradient-to-b from-amber-900/35 via-amber-800/25 to-amber-950/60" />
@@ -59,20 +71,49 @@
 </template>
 
 <script setup lang="ts">
-// Real photography instead of the picsum placeholder. Vite hashes the URL.
-import heroBg from '~/assets/images/hero-aegean-bay.jpeg'
-
-const parallaxY = ref(0)
+/**
+ * The offset is written straight to the element's style inside a rAF callback
+ * rather than through a ref. Scroll fires more often than the screen repaints,
+ * so a ref would run Vue's reactivity and patch the DOM several times per frame
+ * for a value only the compositor ever reads.
+ */
+const parallax = ref<HTMLElement | null>(null)
+let ticking = false
 
 const handleScroll = () => {
-  parallaxY.value = window.scrollY * 0.35
+  if (ticking) return
+  ticking = true
+  requestAnimationFrame(() => {
+    ticking = false
+    const el = parallax.value
+    if (el) el.style.transform = `scale(1.12) translate3d(0, ${window.scrollY * 0.35}px, 0)`
+  })
 }
 
 onMounted(() => {
+  // Nothing to animate when the visitor asked for less motion; the image then
+  // just sits still behind the copy.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
   window.addEventListener('scroll', handleScroll, { passive: true })
+  handleScroll()
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
+
+<style scoped>
+.parallax {
+  transform: scale(1.12);
+  /* `will-change` only while the hero can actually move — promoting it for the
+     whole page life keeps a full-viewport layer in memory for nothing. */
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax {
+    will-change: auto;
+  }
+}
+</style>

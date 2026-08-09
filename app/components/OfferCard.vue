@@ -3,12 +3,14 @@
     <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-400 border border-stone-100 hover:border-amber-100">
       <!-- Image -->
       <div class="relative h-52 overflow-hidden">
-        <img
+        <NuxtImg
           :src="offer.heroImage.src"
           :alt="localize(offer.heroImage.alt)"
-          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          format="webp"
+          sizes="xs:100vw sm:50vw md:33vw lg:400px"
           loading="lazy"
-        >
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
         <!-- Availability badge -->

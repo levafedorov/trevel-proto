@@ -2,9 +2,13 @@
   <div class="pt-16">
     <!-- Page Hero -->
     <section class="relative py-28 overflow-hidden bg-amber-950">
-      <div
-        class="absolute inset-0 bg-cover bg-center opacity-40"
-        :style="{ backgroundImage: `url(${contactsHeroBg})` }"
+      <NuxtImg
+        src="/images/first-tour/kusadasy-lighthouse.jpeg"
+        alt=""
+        format="webp"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw"
+        densities="x1"
+        class="absolute inset-0 w-full h-full object-cover opacity-40"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-amber-950/75 to-amber-900/35" />
       <UContainer class="relative z-10">
@@ -86,8 +90,6 @@
 </template>
 
 <script setup lang="ts">
-import contactsHeroBg from '~/assets/images/first-tour/kusadasy-lighthouse.jpeg'
-
 const { t } = useI18n()
 
 // Function form so the tags re-render when the locale changes.

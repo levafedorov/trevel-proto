@@ -67,9 +67,19 @@ export default defineNuxtConfig({
     },
   },
 
+  // Photography is served from `public/images` and resized at build time: the
+  // `static` nitro preset below switches @nuxt/image to the `ipxStatic`
+  // provider, which writes every requested variant into `.output/public/_ipx`
+  // during prerender. Nothing resizes at runtime — the bucket has no server.
+  //
+  // Caveat that shapes the markup: ipxStatic only emits a variant it actually
+  // saw rendered while crawling. Anything behind a `v-if` (the lightbox) never
+  // renders during prerender, so it must NOT use <NuxtImg> — it points straight
+  // at the original file in `public/`, which is always there.
   image: {
     domains: ['picsum.photos', 'images.unsplash.com'],
-    format: ['webp', 'jpg'],
+    format: ['webp'],
+    quality: 72,
   },
 
   // Deployed as a fully prerendered site to Yandex Object Storage: no server

@@ -9,12 +9,14 @@
         class="group relative shrink-0 basis-[82%] md:basis-auto snap-center rounded-xl overflow-hidden aspect-[4/3] bg-stone-100"
         @click="lightbox.show(i)"
       >
-        <img
+        <NuxtImg
           :src="image.src"
           :alt="localize(image.alt)"
+          format="webp"
+          sizes="xs:82vw sm:82vw md:33vw lg:340px xl:420px"
           loading="lazy"
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        >
+        />
         <span class="absolute bottom-2 left-2 text-white text-xs font-medium px-2 py-0.5 rounded bg-black/40 backdrop-blur-sm">
           {{ localize(image.alt) }}
         </span>

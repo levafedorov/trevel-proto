@@ -8,8 +8,7 @@ import { defineNuxtModule } from 'nuxt/kit'
  * Deriving it from the prerender result rather than from the offer repository
  * keeps the sitemap correct for free: every tour added to the repository shows
  * up as a crawled route, and nothing that failed to build can leak into the
- * sitemap. Importing the repository here would not work anyway — it pulls in
- * `~/assets/images/*`, which only Vite can resolve.
+ * sitemap.
  */
 export default defineNuxtModule({
   meta: { name: 'sitemap' },

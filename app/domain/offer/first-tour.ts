@@ -8,27 +8,32 @@
 import { Availability, DepartureStatus, InclusionKind, NoteTone, PaymentKind } from './types'
 import type { DayNote, LocalizedText, Offer } from './types'
 
-// Real photography (days 1–4). Vite resolves these imports to hashed URLs.
+// Real photography (days 1–4). These live in `public/` and are referenced by
+// plain path, not imported: `<NuxtImg>` needs a path it can hand to the image
+// provider, and keeping them out of the Vite module graph also keeps Nitro from
+// emitting a `<link rel="prefetch">` for every one of them on every page.
+const PHOTOS = '/images/first-tour'
+
 // Card thumbnail and og:image for this offer.
-import coverImg from '~/assets/images/first-tour/izmir-bay-panorama.jpeg'
-import hotelRoomImg from '~/assets/images/first-tour/hotel-room.jpeg'
-import hotelPoolImg from '~/assets/images/first-tour/hotel-pool.jpeg'
-import clockTowerImg from '~/assets/images/first-tour/second-day.jpeg'
-import kemeraltiImg from '~/assets/images/first-tour/second-day-1.jpeg'
-import yachtImg from '~/assets/images/first-tour/kushadasy.jpeg'
-import guletImg from '~/assets/images/first-tour/kusadasy-1.jpeg'
-import kusadasyLighthouseImg from '~/assets/images/first-tour/kusadasy-lighthouse.jpeg'
-import celsusImg from '~/assets/images/first-tour/efes-celsus.jpeg'
-import sirinceImg from '~/assets/images/first-tour/efes-1.jpeg'
-import alacatiImg from '~/assets/images/first-tour/alacati-street.jpeg'
-import seasideRestaurantImg from '~/assets/images/first-tour/seaside-restaurant.jpeg'
-import pamukkaleImg from '~/assets/images/first-tour/pamukkale-terraces.jpeg'
-import hierapolisImg from '~/assets/images/first-tour/hierapolis-theatre.jpeg'
-import terraceImg from '~/assets/images/first-tour/restaurant-terrace.jpeg'
+const coverImg = `${PHOTOS}/izmir-bay-panorama.jpeg`
+const hotelRoomImg = `${PHOTOS}/hotel-room.jpeg`
+const hotelPoolImg = `${PHOTOS}/hotel-pool.jpeg`
+const clockTowerImg = `${PHOTOS}/second-day.jpeg`
+const kemeraltiImg = `${PHOTOS}/second-day-1.jpeg`
+const yachtImg = `${PHOTOS}/kushadasy.jpeg`
+const guletImg = `${PHOTOS}/kusadasy-1.jpeg`
+const kusadasyLighthouseImg = `${PHOTOS}/kusadasy-lighthouse.jpeg`
+const celsusImg = `${PHOTOS}/efes-celsus.jpeg`
+const sirinceImg = `${PHOTOS}/efes-1.jpeg`
+const alacatiImg = `${PHOTOS}/alacati-street.jpeg`
+const seasideRestaurantImg = `${PHOTOS}/seaside-restaurant.jpeg`
+const pamukkaleImg = `${PHOTOS}/pamukkale-terraces.jpeg`
+const hierapolisImg = `${PHOTOS}/hierapolis-theatre.jpeg`
+const terraceImg = `${PHOTOS}/restaurant-terrace.jpeg`
 
 // Gallery-only shots (not tied to a single day).
-import izmirStreetImg from '~/assets/images/first-tour/izmir-street.jpeg'
-import izmirBayGullImg from '~/assets/images/first-tour/izmir-bay-gull.jpeg'
+const izmirStreetImg = `${PHOTOS}/izmir-street.jpeg`
+const izmirBayGullImg = `${PHOTOS}/izmir-bay-gull.jpeg`
 
 /** Compact bilingual literal. */
 const t = (ru: string, en: string): LocalizedText => ({ ru, en })

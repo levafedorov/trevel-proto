@@ -2,9 +2,13 @@
   <div class="pt-16">
     <!-- Page Hero -->
     <section class="relative py-28 overflow-hidden bg-amber-950">
-      <div
-        class="absolute inset-0 bg-cover bg-center opacity-40"
-        :style="{ backgroundImage: `url(${aboutHeroBg})` }"
+      <NuxtImg
+        src="/images/first-tour/alacati-street.jpeg"
+        alt=""
+        format="webp"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
+        densities="x1"
+        class="absolute inset-0 w-full h-full object-cover opacity-40"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-amber-950/75 to-amber-900/35" />
       <UContainer class="relative z-10">
@@ -47,9 +51,14 @@
           <div class="flex flex-col items-center lg:items-start">
             <div class="relative">
               <div class="w-80 h-96 rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  :src="managerPhoto"
+                <NuxtImg
+                  src="/images/director-photo.jpeg"
                   :alt="$t('about.managerName')"
+                  format="webp"
+                  width="320"
+                  height="384"
+                  sizes="320px"
+                  loading="lazy"
                   class="w-full h-full object-cover"
                 />
               </div>
@@ -65,9 +74,14 @@
 
     <!-- Philosophy section -->
     <section class="py-24 bg-stone-900 text-white overflow-hidden relative">
-      <div
-        class="absolute inset-0 bg-cover bg-center opacity-15"
-        :style="{ backgroundImage: `url(${philosophyBg})` }"
+      <NuxtImg
+        src="/images/first-tour/efes-celsus.jpeg"
+        alt=""
+        format="webp"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw"
+        densities="x1"
+        loading="lazy"
+        class="absolute inset-0 w-full h-full object-cover opacity-15"
       />
       <UContainer class="relative z-10 text-center max-w-3xl">
         <p class="text-amber-400 font-medium tracking-widest text-sm uppercase mb-4">
@@ -110,10 +124,6 @@
 </template>
 
 <script setup lang="ts">
-import managerPhoto from '~/assets/images/director-photo.jpeg'
-import aboutHeroBg from '~/assets/images/first-tour/alacati-street.jpeg'
-import philosophyBg from '~/assets/images/first-tour/efes-celsus.jpeg'
-
 const { t } = useI18n()
 
 // Function form so the tags re-render when the locale changes.

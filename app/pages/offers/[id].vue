@@ -20,9 +20,15 @@ const { data: offer, pending, error, notFound, retry } = useOfferDetail(slug.val
 
 const { localize } = useLocalizedText()
 
+// og:image has to be absolute — crawlers do not resolve it against the page.
+const { public: { siteUrl } } = useRuntimeConfig()
+
 useSeoMeta({
   title: () => (offer.value ? localize(offer.value.meta.title) : 'LovEnRoute'),
   description: () => (offer.value ? localize(offer.value.meta.description) : ''),
-  ogImage: () => offer.value?.meta.ogImage ?? '',
+  ogImage: () => {
+    const path = offer.value?.meta.ogImage
+    return path ? `${siteUrl}${path}` : `${siteUrl}/og-cover.jpg`
+  },
 })
 </script>
