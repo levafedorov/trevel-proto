@@ -30,9 +30,19 @@
           {{ localize(offer.title) }}
         </h3>
 
-        <p class="text-stone-500 text-xs flex items-center gap-1 mb-3">
+        <p class="text-stone-500 text-xs flex items-center gap-1 mb-1.5">
           <UIcon name="i-lucide-map-pin" class="w-3.5 h-3.5 text-amber-500 shrink-0" />
           {{ localize(offer.location) }}
+        </p>
+
+        <!-- The two Aegean tours run the same route, so the dates are what
+             distinguishes them at a glance. -->
+        <p
+          v-if="offer.departureLabel"
+          class="text-stone-600 text-xs font-medium flex items-center gap-1 mb-3"
+        >
+          <UIcon name="i-lucide-calendar-days" class="w-3.5 h-3.5 text-amber-500 shrink-0" />
+          {{ localize(offer.departureLabel) }}
         </p>
 
         <p class="text-stone-500 text-sm leading-relaxed line-clamp-2 mb-4">

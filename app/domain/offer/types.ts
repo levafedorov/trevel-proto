@@ -165,6 +165,8 @@ export interface OfferSummary {
   durationDays: number
   availability: Availability
   category: string
+  /** Nearest bookable departure, e.g. "10–17 October 2026". Absent if none. */
+  departureLabel?: LocalizedText
 }
 
 /** Full offer aggregate consumed by the detail page. */

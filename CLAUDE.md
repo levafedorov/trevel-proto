@@ -95,6 +95,45 @@ Render them with `<NuxtImg>`, always with `format="webp"` and an explicit
   point at an `/_ipx/` URL that was never generated and 404 in production while
   working in dev. `MediaLightbox.vue` is the standing example: plain `<img>`.
 
+### Scroll effects
+
+**The header never moves.** It is fixed, always visible, and only swaps its
+background once the page has scrolled (two thresholds, 48/16, so a position
+resting on the boundary cannot flicker). It previously hid on scroll-down and
+returned on scroll-up and on a 600ms timer — which slid a full-width blurred
+strip across the hero throughout normal reading, since reading is flick, pause,
+flick. Thresholds did not help; the movement was the problem. Do not reinstate
+hide-on-scroll. Its `transition` must also never be `all` or include
+`backdrop-filter`, or the blur radius animates and the strip behind it is
+re-blurred for the whole 300ms. `test/e2e/navbar.spec.ts` pins this.
+
+**The hero has no parallax.** It is a still, full-bleed image; `HeroSection.vue`
+is template-only. If one is ever wanted again, do not drive it from a `scroll`
+handler — that event fires after the browser has painted the new offset, so the
+image is permanently a frame behind the content in front of it and jitters. Use
+a scroll-driven CSS animation (`animation-timeline: scroll()`), which the
+compositor evaluates. Nuxt UI has no parallax component, and VueUse's
+`useParallax` is tilt-based, not scroll.
+
+### Hydration
+
+Below-the-fold and on-demand components defer hydration via the `Lazy` prefix
+and a strategy prop (`hydrate-on-visible`, `hydrate-when`). Rules that matter:
+
+- Strategy props only exist on **auto-imported** components. A component reached
+  through an explicit `import` cannot use them — `OfferLayout` keeps explicit
+  imports only for the pieces that hydrate eagerly.
+- **Anything driving first-gesture behaviour must stay eager**: `AppNavbar`
+  (hides on scroll), `HeroSection` (parallax listener), `OfferSubNav`,
+  `OfferBookingBar`.
+- The `<section id="…">` wrappers in `OfferLayout` stay eager because
+  `useSectionNav` observes them by id; only their contents defer.
+- Any prop change hydrates the component immediately, so this only works while
+  the data is stable — it is, because the offer comes from the prerender payload.
+- A native `<details>` (the itinerary day cards) opens with no JavaScript, so it
+  is useless as a probe for whether a section hydrated. Test a real click
+  handler instead.
+
 ### Icons
 
 `icon.provider` is `'none'` with `clientBundle.scan` — every icon must ship in
