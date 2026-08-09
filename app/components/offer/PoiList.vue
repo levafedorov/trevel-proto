@@ -18,13 +18,17 @@
       <figcaption class="text-stone-500 text-xs mt-1.5 truncate">{{ localize(poi.label) }}</figcaption>
     </figure>
 
-    <MediaLightbox v-model:open="lightbox.open" v-model:index="lightbox.index" :images="images" />
+    <LazyOfferMediaLightbox
+      v-model:open="lightbox.open"
+      v-model:index="lightbox.index"
+      :images="images"
+      :hydrate-when="lightbox.open"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import type { PointOfInterest } from '~/domain/offer/types'
-import MediaLightbox from './MediaLightbox.vue'
 
 const props = defineProps<{ pois: PointOfInterest[] }>()
 

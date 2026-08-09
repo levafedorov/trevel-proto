@@ -23,13 +23,20 @@
       </button>
     </div>
 
-    <MediaLightbox v-model:open="lightbox.open" v-model:index="lightbox.index" :images="images" />
+    <!-- Nothing of the viewer is on screen until a thumbnail is clicked, and it
+         brings a swipe handler and a keydown listener with it. Hydrating it on
+         the same flag that opens it keeps all of that out of page load. -->
+    <LazyOfferMediaLightbox
+      v-model:open="lightbox.open"
+      v-model:index="lightbox.index"
+      :images="images"
+      :hydrate-when="lightbox.open"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import type { Media } from '~/domain/offer/types'
-import MediaLightbox from './MediaLightbox.vue'
 
 defineProps<{ images: Media[] }>()
 

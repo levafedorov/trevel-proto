@@ -1,8 +1,13 @@
 <template>
   <div>
+    <!-- The hero is above the fold, so it hydrates immediately. Everything under
+         it is prerendered markup the visitor has to scroll to;
+         `hydrate-on-visible` keeps its JavaScript off the critical path.
+         `rootMargin` starts the work just before the section comes into view,
+         so it is interactive by the time it lands. -->
     <HeroSection />
-    <AdvantagesSection />
-    <RecentOffersSection />
+    <LazyAdvantagesSection :hydrate-on-visible="{ rootMargin: '200px' }" />
+    <LazyRecentOffersSection :hydrate-on-visible="{ rootMargin: '200px' }" />
 
     <!-- CTA Banner -->
     <section class="py-24 bg-amber-600 relative overflow-hidden">
