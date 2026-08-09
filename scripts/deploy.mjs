@@ -16,7 +16,7 @@ import { join, relative, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawn } from 'node:child_process'
 import { AwsClient } from 'aws4fetch'
-import mime from 'mime'
+import { cacheControlFor, contentTypeFor } from './asset-headers.mjs'
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)))
 const DIST = join(ROOT, '.output/public')
@@ -24,14 +24,6 @@ const DIST = join(ROOT, '.output/public')
 const BUCKET = process.env.DEPLOY_BUCKET || 'lovenroute.com'
 const ENDPOINT = 'https://storage.yandexcloud.net'
 const REGION = 'ru-central1'
-
-// Hashed filenames under these prefixes can never change meaning, so they are
-// safe to cache forever. Everything else — HTML above all — must revalidate:
-// there is no CDN to purge, so a long max-age on a page would strand visitors
-// on an old build with no way to push them off it.
-const IMMUTABLE_PREFIXES = ['_nuxt/', '_fonts/']
-const CACHE_IMMUTABLE = 'public, max-age=31536000, immutable'
-const CACHE_REVALIDATE = 'public, max-age=0, must-revalidate'
 
 const UPLOAD_CONCURRENCY = 8
 
@@ -104,12 +96,6 @@ function decodeXml(value) {
     .replace(/&amp;/g, '&')
 }
 
-function cacheControlFor(key) {
-  return IMMUTABLE_PREFIXES.some(p => key.startsWith(p))
-    ? CACHE_IMMUTABLE
-    : CACHE_REVALIDATE
-}
-
 async function upload(client, key, file) {
   const { size } = await stat(file)
   const res = await client.fetch(`${ENDPOINT}/${BUCKET}/${encodeURI(key)}`, {
@@ -117,7 +103,7 @@ async function upload(client, key, file) {
     body: createReadStream(file),
     duplex: 'half',
     headers: {
-      'content-type': mime.getType(file) || 'application/octet-stream',
+      'content-type': await contentTypeFor(file),
       'content-length': String(size),
       'cache-control': cacheControlFor(key),
     },
