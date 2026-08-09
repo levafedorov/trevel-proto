@@ -23,7 +23,7 @@
             :variant="activeFilter === filter.value ? 'solid' : 'ghost'"
             :color="activeFilter === filter.value ? 'primary' : 'neutral'"
             size="sm"
-            @click="activeFilter = filter.value"
+            @click="selectFilter(filter.value)"
           >
             {{ filter.label }}
             <UBadge
@@ -82,6 +82,12 @@ useSeoMeta({
 type FilterValue = 'all' | 'active' | 'inactive'
 
 const activeFilter = ref<FilterValue>('all')
+
+// A named handler rather than an inline assignment: Nuxt UI types the button's
+// click handler as returning void, and an assignment evaluates to its value.
+function selectFilter(value: FilterValue) {
+  activeFilter.value = value
+}
 
 const isActive = (offer: OfferSummary) => offer.availability === Availability.ACTIVE
 

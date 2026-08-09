@@ -91,7 +91,7 @@
             color="neutral"
             :icon="mobileMenuOpen ? 'i-lucide-x' : 'i-lucide-menu'"
             class="text-stone-800"
-            @click="mobileMenuOpen = !mobileMenuOpen"
+            @click="toggleMobileMenu"
           />
         </div>
       </nav>
@@ -137,6 +137,12 @@ const { isVisible } = useScrollNavbar()
 
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
+
+// A named handler rather than an inline assignment: Nuxt UI types the button's
+// click handler as returning void, and `a = !a` evaluates to the new boolean.
+function toggleMobileMenu() {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
 
 const localeOptions = [
   { code: 'en', label: 'EN' },

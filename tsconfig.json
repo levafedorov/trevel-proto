@@ -1,3 +1,16 @@
 {
-  "extends": "./.nuxt/tsconfig.json"
+  // Project references, not `extends` (the two are mutually exclusive). Nuxt 4
+  // splits the codebase by execution context, and each half needs different
+  // globals: `modules/` and `nuxt.config.ts` run in Node and are covered by
+  // tsconfig.node.json, while `app/` gets the browser + auto-import types.
+  //
+  // Extending the legacy `.nuxt/tsconfig.json` typechecked everything as app
+  // code, which is why `modules/sitemap.ts` could not resolve `node:path`.
+  "files": [],
+  "references": [
+    { "path": "./.nuxt/tsconfig.app.json" },
+    { "path": "./.nuxt/tsconfig.server.json" },
+    { "path": "./.nuxt/tsconfig.shared.json" },
+    { "path": "./.nuxt/tsconfig.node.json" }
+  ]
 }
