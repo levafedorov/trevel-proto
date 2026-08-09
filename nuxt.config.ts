@@ -30,6 +30,21 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
+  // Icons must ship inside the client bundle. @nuxt/icon's default is to fetch
+  // any icon it did not see server-rendered from `/api/_nuxt_icon/*` at
+  // runtime — an endpoint that cannot exist on a static bucket. It only bites
+  // icons rendered client-side, which is why it went unnoticed: the lightbox
+  // arrows and its close button sit behind `v-if="open"`, so on production they
+  // silently rendered as nothing. `provider: 'none'` removes the runtime
+  // fallback entirely so this fails loudly at build time instead.
+  icon: {
+    provider: 'none',
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 512,
+    },
+  },
+
   ui: {
     // The site is light-only: no `dark:` styles, no theme toggle. Without this,
     // @nuxt/ui registers color-mode, which adds `.dark` to <html> whenever the
