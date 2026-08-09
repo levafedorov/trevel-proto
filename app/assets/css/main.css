@@ -50,12 +50,6 @@ html {
   font-family: var(--font-serif);
 }
 
-/* Hero parallax container */
-.hero-parallax-container {
-  position: relative;
-  overflow: hidden;
-}
-
 /* Fade-up animation */
 @keyframes fadeUp {
   from {

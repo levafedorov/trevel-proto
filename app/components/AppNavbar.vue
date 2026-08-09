@@ -1,11 +1,19 @@
 <template>
   <header
     :class="[
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-      isVisible ? 'translate-y-0' : '-translate-y-full',
-      isScrolled
-        ? 'bg-white/98 backdrop-blur-md shadow-sm'
-        : 'bg-white/90 backdrop-blur-sm',
+      // The bar never moves. It used to hide on scroll-down and return on
+      // scroll-up (and on a timer), which meant a full-width blurred strip
+      // sliding across the hero throughout normal reading — every flick sent it
+      // away, every pause brought it back. No amount of thresholds made that
+      // feel steady, because the movement itself was the problem.
+      //
+      // What is left is one boolean and one threshold. `transition` names only
+      // the two cheap properties it needs: it must never cover
+      // `backdrop-filter`, or changing the blur radius animates it, re-blurring
+      // the strip of hero behind the bar for the whole 300ms.
+      'fixed top-0 left-0 right-0 z-50 backdrop-blur-md',
+      'transition-[background-color,box-shadow] duration-300',
+      isScrolled ? 'bg-white/98 shadow-sm' : 'bg-white/90',
     ]"
   >
     <UContainer>
@@ -133,7 +141,6 @@
 <script setup lang="ts">
 const { t, locale, setLocale } = useI18n()
 const route = useRoute()
-const { isVisible } = useScrollNavbar()
 
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
@@ -156,14 +163,23 @@ const navLinks = computed(() => [
   { to: '/contacts', label: t('nav.contacts'), icon: 'i-lucide-phone' },
 ])
 
+// Two thresholds rather than one, so a scroll position sitting exactly on the
+// boundary cannot flip the background back and forth.
+const SOLID_BELOW = 48
+const TRANSPARENT_ABOVE = 16
+
+const handleScroll = () => {
+  const y = window.scrollY
+  if (!isScrolled.value && y > SOLID_BELOW) isScrolled.value = true
+  else if (isScrolled.value && y < TRANSPARENT_ABOVE) isScrolled.value = false
+}
+
 onMounted(() => {
-  const handleScroll = () => {
-    isScrolled.value = window.scrollY > 40
-  }
   window.addEventListener('scroll', handleScroll, { passive: true })
   handleScroll()
-  onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 })
+
+onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
 watch(() => route.path, () => {
   mobileMenuOpen.value = false
